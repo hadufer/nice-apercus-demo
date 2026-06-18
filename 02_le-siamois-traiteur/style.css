@@ -48,7 +48,7 @@ a{color:inherit;text-decoration:none}
 /* ===== generic ===== */
 .kicker{font-size:.66rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);
   display:flex;align-items:center;gap:12px;justify-content:center}
-.kicker::before,.kicker::after{content:"";width:34px;height:1px;background:var(--line)}
+.kicker::before,.kicker::after{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--gold)}
 .kicker.left{justify-content:flex-start}.kicker.left::before{display:none}
 h1.disp{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.04;
   font-size:clamp(2.7rem,11vw,5.4rem);letter-spacing:.01em}
@@ -179,3 +179,8 @@ section{padding:72px 0}
   .ft-in{grid-template-columns:1.6fr 1fr 1fr;gap:40px}
 }
 @media(min-width:760px){.hero-in{padding-bottom:80px}}
+
+/* animation pass (reveal base states) */
+.js-anim .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
