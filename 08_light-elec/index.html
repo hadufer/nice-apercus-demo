@@ -2,191 +2,32 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Light Elec — Électricien à Nice &amp; Côte d’Azur</title>
-<meta name="description" content="Électricien à Nice et sur la Côte d’Azur. Installation, mise aux normes et dépannage, quand vous en avez besoin.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Electricien a Nice | Light Elec</title>
+<meta name="description" content="Light Elec, electricien a Nice et dans les Alpes-Maritimes. Depannage, installation et renovation electrique pour particuliers, professionnels et agences.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --black:#0c0c0e; --black-2:#141417; --panel:#1b1b1f; --gold:#f3c14b; --gold-d:#d6a225; --amberglow:#ffd87a;
-    --ink:#f4f1ea; --muted:#9a978f; --line:#27272c; --line-2:#34343a; --maxw:1100px;
-  }
-  *{box-sizing:border-box;margin:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{font-family:Sora,system-ui,sans-serif;color:var(--ink);background:var(--black);
-    line-height:1.62;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-weight:700;line-height:1.1;letter-spacing:-.02em}
-  p{text-wrap:pretty}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:26px}
-  svg{display:block}
-  .kick{font-size:.76rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-
-  header{position:sticky;top:0;z-index:40;background:rgba(12,12,14,.85);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.16rem}
-  .brand .bulb{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 50% 40%,var(--amberglow),var(--gold-d));
-    box-shadow:0 0 18px 2px rgba(243,193,75,.55)}
-  .nav-links{display:flex;gap:1.8rem;align-items:center}
-  .nav-links a{font-size:.92rem;color:var(--muted);font-weight:500}
-  .nav-links a:hover{color:var(--ink)}
-  .nav-tel{display:inline-flex;align-items:center;gap:.45rem;color:var(--black);background:var(--gold);padding:.55rem .95rem;border-radius:999px;font-weight:700;font-size:.9rem}
-  .nav-tel svg{width:15px;height:15px}
-  @media(max-width:840px){.nav-links a:not(.nav-tel){display:none}}
-
-  /* hero — light beam from top */
-  .hero{position:relative;overflow:hidden;padding:92px 0 72px;text-align:center;
-    background:radial-gradient(60% 70% at 50% -16%,rgba(243,193,75,.22),transparent 60%)}
-  .hero::before{content:"";position:absolute;top:-40%;left:50%;transform:translateX(-50%);
-    width:60%;height:120%;background:conic-gradient(from 180deg at 50% 0,transparent 42%,rgba(255,216,122,.08) 50%,transparent 58%);pointer-events:none}
-  .hero .kick{position:relative}
-  .hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);max-width:16ch;margin:1rem auto 1.2rem;font-weight:800;position:relative}
-  .hero h1 .g{color:var(--gold);text-shadow:0 0 30px rgba(243,193,75,.45)}
-  .hero-lead{font-size:1.18rem;color:var(--muted);max-width:48ch;margin:0 auto 2.2rem;position:relative}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;position:relative}
-  .btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:1rem;
-    padding:.92rem 1.5rem;border-radius:12px;border:1.6px solid transparent;
-    transition:transform .16s,background .16s,border-color .16s,box-shadow .16s;min-height:52px}
-  .btn svg{width:18px;height:18px}
-  .btn-primary{background:var(--gold);color:var(--black);box-shadow:0 0 30px -4px rgba(243,193,75,.6)}
-  .btn-primary:hover{background:var(--amberglow);transform:translateY(-2px)}
-  .btn-ghost{border-color:var(--line-2);color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-  .hero-meta{display:flex;flex-wrap:wrap;gap:1.8rem;justify-content:center;margin-top:2.4rem;color:var(--muted);font-size:.92rem;font-weight:500;position:relative}
-  .hero-meta span{display:inline-flex;align-items:center;gap:.5rem}
-  .hero-meta svg{width:17px;height:17px;color:var(--gold)}
-
-  section{padding:84px 0}
-  .sec-head{text-align:center;max-width:40ch;margin:0 auto 3rem}
-  .sec-head h2{font-size:clamp(2rem,4.4vw,3rem);margin-top:.6rem}
-
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:1.1rem}
-  .card{background:var(--black-2);border:1px solid var(--line);border-radius:16px;padding:1.7rem 1.6rem;transition:transform .16s,border-color .16s,box-shadow .16s}
-  .card:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 20px 50px -28px rgba(243,193,75,.4)}
-  .card .ic{width:50px;height:50px;border-radius:13px;background:var(--panel);color:var(--gold);display:grid;place-items:center;margin-bottom:1rem;border:1px solid var(--line-2)}
-  .card .ic svg{width:25px;height:25px}
-  .card h3{font-size:1.16rem;margin-bottom:.35rem}
-  .card p{color:var(--muted);font-size:.95rem}
-
-  /* band */
-  .band{background:linear-gradient(120deg,var(--black-2),#181410);border-block:1px solid var(--line);position:relative;overflow:hidden}
-  .band::before{content:"";position:absolute;left:50%;top:-60%;transform:translateX(-50%);width:50%;height:120%;background:radial-gradient(circle,rgba(243,193,75,.12),transparent 60%)}
-  .band-in{max-width:820px;margin-inline:auto;text-align:center;padding:18px 0;position:relative}
-  .band .kick{display:block;margin-bottom:1.3rem}
-  .band blockquote{font-size:clamp(1.5rem,3.4vw,2.25rem);line-height:1.38;font-weight:600;color:var(--ink)}
-  .band blockquote .g{color:var(--gold)}
-  .band .sign{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.7rem;font-size:.9rem;color:var(--muted);font-weight:600}
-  .band .sign .bulb{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 50% 40%,var(--amberglow),var(--gold-d));box-shadow:0 0 12px rgba(243,193,75,.6)}
-
-  /* contact */
-  .contact-card{display:grid;grid-template-columns:1.05fr .95fr;border-radius:18px;overflow:hidden;border:1px solid var(--line-2);box-shadow:0 30px 70px -40px #000;margin-top:2.4rem}
-  @media(max-width:820px){.contact-card{grid-template-columns:1fr}}
-  .cc-left{background:linear-gradient(150deg,var(--gold),var(--gold-d));color:var(--black);padding:2.8rem;position:relative;overflow:hidden}
-  .cc-left::after{content:"";position:absolute;right:-50px;bottom:-50px;width:180px;height:180px;border-radius:50%;border:2px solid rgba(12,12,14,.16)}
-  .cc-left h2{font-size:clamp(1.8rem,3.4vw,2.4rem);margin-bottom:.7rem;position:relative}
-  .cc-left p{max-width:30ch;color:#4a3a10;font-size:1.05rem;position:relative}
-  .cc-left .btn{margin-top:1.7rem;background:var(--black);color:var(--ink);position:relative}
-  .cc-left .btn:hover{background:#000;transform:translateY(-2px)}
-  .cc-right{background:var(--black-2);padding:2.4rem 2.6rem;display:grid;align-content:center}
-  .row{display:flex;align-items:center;gap:1rem;padding:1.05rem 0;border-bottom:1px solid var(--line)}
-  .row:last-child{border-bottom:0}
-  a.row:hover .rv{color:var(--gold)}
-  .row .ic{width:46px;height:46px;border-radius:12px;background:var(--panel);color:var(--gold);display:grid;place-items:center;flex:0 0 auto;border:1px solid var(--line-2)}
-  .row .ic svg{width:21px;height:21px}
-  .rk{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
-  .rv{font-size:1.06rem;font-weight:700;transition:color .15s}
-
-  footer{padding:38px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;color:var(--muted);font-size:.88rem}
-  footer .fw{font-weight:800;color:var(--ink);display:flex;align-items:center;gap:.5rem}
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top"><span class="bulb"></span>Light Elec</a>
-    <nav class="nav-links">
-      <a href="#services">Prestations</a>
-      <a href="#methode">En clair</a>
-      <a class="nav-tel" href="tel:0659421348">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-        06 59 42 13 48
-      </a>
-    </nav>
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="index.html"><span class="mark">L</span><span><b>Light Elec</b><small>Electricien · Nice</small></span></a>
+    <nav class="nav"><a href="index.html" aria-current="page">Accueil</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
+    <a class="hdr-cta" href="contact.html">Obtenir un devis</a>
+    <button class="burger" aria-label="Menu" onclick="this.classList.toggle('x');document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
-</header>
-
-<main id="top">
-  <section class="hero">
-    <div class="wrap">
-      <span class="kick">Électricien · Nice &amp; Côte d’Azur</span>
-      <h1>Votre installation, dans <span class="g">les règles de l’art</span>.</h1>
-      <p class="hero-lead">L’électricité, ça ne se bricole pas. On installe et on remet aux normes proprement, on vous explique ce qu’on fait, et on reste joignable si un souci revient.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="tel:0659421348">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-          06 59 42 13 48
-        </a>
-        <a class="btn btn-ghost" href="mailto:lightelec.contact@gmail.com">Demander un devis</a>
-      </div>
-      <div class="hero-meta">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>8 rue Meyerbeer, Nice</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Disponible 7j/7</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="wrap">
-      <div class="sec-head"><span class="kick">Prestations</span><h2>Ce que nous faisons</h2></div>
-      <div class="grid">
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div><h3>Installation</h3><p>Tableaux, circuits, points lumineux : du neuf bien câblé.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/></svg></div><h3>Mise aux normes</h3><p>Diagnostic et remise en conformité de votre installation.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17h.01"/></svg></div><h3>Dépannage</h3><p>On intervient vite en cas de panne ou de court-circuit.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10c-1 1-1 2-1 3H9c0-1 0-2-1-3a6 6 0 0 1 4-10Z"/></svg></div><h3>Éclairage &amp; domotique</h3><p>Conception d’éclairage et solutions connectées.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="methode">
-    <div class="wrap">
-      <div class="band-in">
-        <span class="kick">En clair</span>
-        <blockquote>L’électricité, <span class="g">ça ne se bricole pas</span>. On installe et on remet aux normes dans les règles, on vous explique ce qu’on fait, et on reste joignable si un souci revient.</blockquote>
-        <span class="sign"><span class="bulb"></span>Light Elec · Nice</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <span class="kick">Contact</span>
-      <h2 style="font-size:clamp(2rem,4.4vw,3rem);margin-top:.6rem">Un projet, une question&nbsp;?</h2>
-      <div class="contact-card">
-        <div class="cc-left">
-          <h2>Écrivez-nous</h2>
-          <p>On répond vite, par e-mail. Dites-nous ce dont vous avez besoin.</p>
-          <a class="btn" href="mailto:lightelec.contact@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            lightelec.contact@gmail.com
-          </a>
-        </div>
-        <div class="cc-right">
-          <a class="row" href="tel:0659421348"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span><span><span class="rk">Téléphone</span><br><span class="rv">06 59 42 13 48</span></span></a>
-          <a class="row" href="mailto:lightelec.contact@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><span class="rk">E-mail</span><br><span class="rv">lightelec.contact@gmail.com</span></span></a>
-          <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><span class="rk">Adresse</span><br><span class="rv">8 rue Meyerbeer, 06000 Nice</span></span></div>
-          <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><span class="rk">Disponibilité</span><br><span class="rv">7j/7 · Côte d’Azur</span></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="wrap">
-  <span class="fw"><span class="bulb" style="width:16px;height:16px"></span>Light Elec</span>
-  <span>© 2026 · Électricien à Nice &amp; Côte d’Azur</span>
+  <div class="mnav" id="mnav"><a href="index.html" aria-current="page">Accueil</a><a href="services.html">Services</a><a href="contact.html">Contact</a><a href="contact.html">Obtenir un devis</a></div>
+</header><section class="hero" ><div class="bg"><img src="img/hero.jpg" alt=""></div><div class="hero-in"><span class="badge">Disponible 24/7 · Nice</span><h1>Light Elec<span>Votre expert electrique</span></h1><p class="sub">Pour particuliers, professionnels et agences. Des interventions soignees, pensees pour la performance, la securite et l'elegance, a Nice et dans les Alpes-Maritimes.</p><div class="btns"><a class="btn btn-accent" href="contact.html">Obtenir un devis</a><a class="btn btn-line" href="tel:+33659421348">Appeler</a></div></div></section><section><div class="wrap"><div class="sec-head ctr"><div class="kicker ctr">Nos services</div><h2 class="sec">Un travail precis, des finitions soignees</h2><p class="lead" style="margin-inline:auto">Du depannage a l installation complete, dans le respect des normes et des delais.</p></div><div class="cards"><a class="svc reveal" href="services.html"><div class="ph"><img src="img/spot.jpg" alt="Depannage"></div><div class="bd"><div class="n">01</div><h3>Depannage</h3><p>Intervention rapide pour tout type de panne, diagnostic precis et remise en service.</p><span class="go">Voir &rsaquo;</span></div></a><a class="svc reveal" href="services.html"><div class="ph"><img src="img/outlet.jpg" alt="Installation"></div><div class="bd"><div class="n">02</div><h3>Installation</h3><p>Mise en place de systemes electriques sur-mesure, dans le respect des normes.</p><span class="go">Voir &rsaquo;</span></div></a><a class="svc reveal" href="services.html"><div class="ph"><img src="img/interior.jpg" alt="Renovation"></div><div class="bd"><div class="n">03</div><h3>Renovation</h3><p>Renovation de reseaux electriques avec equipements haut de gamme et finitions soignees.</p><span class="go">Voir &rsaquo;</span></div></a></div></div></section><section class="band"><div class="wrap"><div class="stats"><div class="s reveal"><b>24/7</b><span>disponible</span></div><div class="s reveal"><b>Pro</b><span>particuliers & agences</span></div><div class="s reveal"><b>Normes</b><span>respectees</span></div><div class="s reveal"><b>06</b><span>Alpes-Maritimes</span></div></div></div></section><section><div class="wrap split rev"><div class="ph"><img src="img/interior.jpg" alt=""></div><div><div class="kicker">Notre approche</div><h2 style="margin-top:10px">Performance,<br>securite et elegance</h2><p class="lead">Chaque projet est realise avec precision, dans le respect des normes et des delais. Nous utilisons des equipements haut de gamme et apportons un soin particulier aux finitions, pour un resultat durable et esthetique.</p><div class="btns" style="justify-content:flex-start"><a class="btn btn-accent" href="contact.html">Obtenir un devis</a></div></div></div></section>
+<footer class="ft">
+  <div class="wrap ft-in">
+    <div><a class="brand" href="index.html"><span class=mark>L</span><span><b>Light Elec</b><small>Electricien · Nice</small></span></a>
+      <p>Light Elec, votre expert en electricite a Nice et dans les Alpes-Maritimes. Installation, maintenance et renovation soignees.</p></div>
+    <div><h5>Navigation</h5><a class="fl" href="index.html">Accueil</a><a class="fl" href="services.html">Services</a><a class="fl" href="contact.html">Contact</a></div>
+    <div><h5>Contact</h5><a class="fl" href="tel:+33659421348">06 59 42 13 48</a><a class="fl" href="mailto:lightelec.contact@gmail.com">lightelec.contact@gmail.com</a><a class="fl">8 rue Meyerbeer, 06000 Nice</a></div>
+  </div>
+  <div class="wrap legal"><span>© 2026 Light Elec. </span><span>Aperçu de refonte realise pour demonstration.</span></div>
 </footer>
-</body>
-</html>
+<script defer src="animate.js"></script>
+</body></html>

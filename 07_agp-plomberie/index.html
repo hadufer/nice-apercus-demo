@@ -2,221 +2,32 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AGP Plomberie — Plombier &amp; dépannage d’urgence à Nice</title>
-<meta name="description" content="Plombier et dépannage d’urgence à Nice. On répond vite, on chiffre clair, et on règle le problème du premier coup.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Plombier urgence 24/7 a Nice | AGP Plomberie</title>
+<meta name="description" content="AGP Plomberie, plombier d'urgence 24h/24 et 7j/7 a Nice. Fuite, chauffe-eau, debouchage, robinetterie, WC. Devis gratuit. 06 07 73 16 69.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ocean:#0e4f7a; --ocean-d:#0a3a5b; --ocean-2:#13628f; --aqua:#0fb6c9; --sun:#f6b53b;
-    --ink:#0f1d28; --muted:#5a6b78; --line:#e2e9ee; --bg:#ffffff; --wash:#f1f6f9; --wash-2:#e6eff4;
-    --maxw:1120px;
-  }
-  *{box-sizing:border-box;margin:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);
-    line-height:1.62;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-weight:700;line-height:1.1;letter-spacing:-.02em}
-  p{text-wrap:pretty}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:26px}
-  svg{display:block}
-  .kick{font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua)}
-
-  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);
-    backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.18rem;letter-spacing:-.01em}
-  .brand .m{width:40px;height:40px;border-radius:10px;background:var(--ocean);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem}
-  .nav-links{display:flex;gap:1.8rem;align-items:center}
-  .nav-links a{font-size:.92rem;color:var(--muted);font-weight:500}
-  .nav-links a:hover{color:var(--ink)}
-  .nav-tel{display:inline-flex;align-items:center;gap:.45rem;color:#fff;background:var(--ocean);padding:.55rem .95rem;border-radius:10px;font-weight:700;font-size:.9rem}
-  .nav-tel svg{width:15px;height:15px}
-  @media(max-width:840px){.nav-links a:not(.nav-tel){display:none}}
-
-  /* hero */
-  .hero{background:linear-gradient(160deg,var(--ocean),var(--ocean-d));color:#fff;position:relative;overflow:hidden;padding:84px 0 0}
-  .hero::before{content:"";position:absolute;right:-10%;top:-20%;width:60%;height:140%;
-    background:radial-gradient(circle,rgba(15,182,201,.22),transparent 60%)}
-  .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;align-items:center;position:relative;padding-bottom:74px}
-  @media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:2.2rem;padding-bottom:60px}}
-  .hero .kick{color:var(--sun)}
-  .hero h1{font-size:clamp(2.6rem,6.2vw,4.5rem);margin:1.1rem 0 1.2rem;max-width:15ch;font-weight:800}
-  .hero h1 .a{color:var(--aqua)}
-  .hero-lead{font-size:1.18rem;color:rgba(255,255,255,.84);max-width:42ch;margin-bottom:2rem}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem}
-  .btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:1rem;
-    padding:.92rem 1.5rem;border-radius:12px;border:1.6px solid transparent;
-    transition:transform .16s,background .16s,border-color .16s,box-shadow .16s;min-height:52px}
-  .btn svg{width:18px;height:18px}
-  .btn-primary{background:var(--sun);color:var(--ocean-d);box-shadow:0 14px 30px -14px var(--sun)}
-  .btn-primary:hover{background:#e8a52a;transform:translateY(-2px)}
-  .btn-ghost{border-color:rgba(255,255,255,.32);color:#fff}
-  .btn-ghost:hover{border-color:var(--aqua);color:var(--aqua)}
-  .urgent{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:1.7rem}
-  .urgent .t{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun);margin-bottom:.6rem}
-  .urgent .num{font-size:2rem;font-weight:800;letter-spacing:-.02em}
-  .urgent .num a:hover{color:var(--aqua)}
-  .urgent .s{color:rgba(255,255,255,.78);font-size:.95rem;margin-top:.4rem}
-  .urgent .av{display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;font-size:.85rem;font-weight:600;color:var(--aqua)}
-  .urgent .av .d{width:8px;height:8px;border-radius:50%;background:var(--aqua)}
-
-  /* process strip */
-  .proc{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -38px rgba(14,79,122,.45);
-    margin:-46px 26px 0;position:relative;z-index:5;display:grid;grid-template-columns:repeat(3,1fr)}
-  @media(max-width:760px){.proc{grid-template-columns:1fr;margin:-30px 26px 0}}
-  .step{padding:1.7rem 1.8rem;border-right:1px solid var(--line);display:flex;gap:1rem}
-  .step:last-child{border-right:0}
-  @media(max-width:760px){.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}}
-  .step .n{width:38px;height:38px;border-radius:50%;background:var(--wash);color:var(--ocean);font-weight:800;display:grid;place-items:center;flex:0 0 auto}
-  .step h3{font-size:1.06rem;margin-bottom:.2rem}
-  .step p{color:var(--muted);font-size:.9rem;line-height:1.5}
-
-  section{padding:84px 0}
-  .sec-head{max-width:38ch;margin-bottom:2.6rem}
-  .sec-head h2{font-size:clamp(2rem,4.4vw,3rem);margin-top:.6rem}
-
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:1.1rem}
-  .card{background:var(--wash);border:1px solid var(--line);border-radius:16px;padding:1.7rem 1.6rem;transition:transform .16s,box-shadow .16s,background .16s}
-  .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(14,79,122,.4);background:#fff}
-  .card .ic{width:50px;height:50px;border-radius:13px;background:var(--ocean);color:#fff;display:grid;place-items:center;margin-bottom:1rem}
-  .card .ic svg{width:25px;height:25px}
-  .card h3{font-size:1.16rem;margin-bottom:.35rem}
-  .card p{color:var(--muted);font-size:.95rem}
-
-  /* band */
-  .band{background:var(--wash);border-block:1px solid var(--line)}
-  .band-in{max-width:820px;margin-inline:auto;text-align:center;padding:18px 0}
-  .band .kick{display:block;margin-bottom:1.3rem;color:var(--ocean-2)}
-  .band blockquote{font-size:clamp(1.5rem,3.4vw,2.25rem);line-height:1.38;font-weight:600;color:var(--ink)}
-  .band blockquote .a{color:var(--ocean-2)}
-  .band .sign{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.7rem;font-size:.9rem;color:var(--muted);font-weight:600}
-  .band .sign .m{width:30px;height:30px;border-radius:8px;background:var(--ocean);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.72rem}
-
-  /* contact */
-  .contact-card{display:grid;grid-template-columns:1.05fr .95fr;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 60px -38px rgba(14,79,122,.4);margin-top:2.4rem}
-  @media(max-width:820px){.contact-card{grid-template-columns:1fr}}
-  .cc-left{background:linear-gradient(160deg,var(--ocean),var(--ocean-d));color:#fff;padding:2.8rem;position:relative;overflow:hidden}
-  .cc-left::after{content:"";position:absolute;right:-50px;bottom:-50px;width:180px;height:180px;border-radius:50%;background:rgba(15,182,201,.18)}
-  .cc-left h2{font-size:clamp(1.8rem,3.4vw,2.4rem);margin-bottom:.7rem;position:relative}
-  .cc-left p{max-width:30ch;color:rgba(255,255,255,.88);font-size:1.05rem;position:relative}
-  .cc-left .btn{margin-top:1.7rem;background:var(--sun);color:var(--ocean-d);position:relative}
-  .cc-left .btn:hover{background:#e8a52a;transform:translateY(-2px)}
-  .cc-right{background:#fff;padding:2.4rem 2.6rem;display:grid;align-content:center}
-  .row{display:flex;align-items:center;gap:1rem;padding:1.05rem 0;border-bottom:1px solid var(--line)}
-  .row:last-child{border-bottom:0}
-  a.row:hover .rv{color:var(--ocean-2)}
-  .row .ic{width:46px;height:46px;border-radius:12px;background:var(--wash);color:var(--ocean);display:grid;place-items:center;flex:0 0 auto}
-  .row .ic svg{width:21px;height:21px}
-  .rk{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .rv{font-size:1.06rem;font-weight:700;transition:color .15s}
-
-  footer{padding:38px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;color:var(--muted);font-size:.88rem}
-  footer .fw{font-weight:800;color:var(--ink)}
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top"><span class="m">AGP</span>AGP Plomberie</a>
-    <nav class="nav-links">
-      <a href="#services">Prestations</a>
-      <a href="#methode">En clair</a>
-      <a class="nav-tel" href="tel:0607731669">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-        06 07 73 16 69
-      </a>
-    </nav>
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="index.html"><span class="mark">A</span><span><b>AGP Plomberie</b><small>Depannage urgence · Nice</small></span></a>
+    <nav class="nav"><a href="index.html" aria-current="page">Accueil</a><a href="services.html">Services</a><a href="urgence.html">Urgence 24/7</a><a href="contact.html">Contact</a></nav>
+    <a class="hdr-cta" href="contact.html">Devis gratuit</a>
+    <button class="burger" aria-label="Menu" onclick="this.classList.toggle('x');document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
-</header>
-
-<main id="top">
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <span class="kick">Plombier · Urgence · Nice</span>
-          <h1>On répond vite. On répare <span class="a">du premier coup</span>.</h1>
-          <p class="hero-lead">Plomberie et dépannage d’urgence à Nice. On cherche l’origine du problème et on le règle pour de bon — pas un rafistolage qui lâche la semaine d’après.</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="tel:0607731669">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-              06 07 73 16 69
-            </a>
-            <a class="btn btn-ghost" href="mailto:agp.plomberie06@gmail.com">Demander un devis</a>
-          </div>
-        </div>
-        <aside class="urgent">
-          <div class="t">Urgence ? Appelez</div>
-          <div class="num"><a href="tel:0607731669">06 07 73 16 69</a></div>
-          <div class="s">Une fuite ou une panne, ça n’attend pas. On se déplace rapidement sur Nice.</div>
-          <span class="av"><span class="d"></span>Disponible 7j/7 · urgences 24h/24</span>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap" style="padding:0">
-    <div class="proc">
-      <div class="step"><span class="n">1</span><div><h3>On vous écoute</h3><p>Vous décrivez le problème, on évalue l’urgence au téléphone.</p></div></div>
-      <div class="step"><span class="n">2</span><div><h3>On chiffre clair</h3><p>Un devis annoncé avant de commencer, sans surprise sur la facture.</p></div></div>
-      <div class="step"><span class="n">3</span><div><h3>On répare</h3><p>Une intervention soignée qui règle le problème durablement.</p></div></div>
-    </div>
+  <div class="mnav" id="mnav"><a href="index.html" aria-current="page">Accueil</a><a href="services.html">Services</a><a href="urgence.html">Urgence 24/7</a><a href="contact.html">Contact</a><a href="contact.html">Devis gratuit</a></div>
+</header><section class="hero" ><div class="bg"><img src="img/hero.jpg" alt=""></div><div class="hero-in"><span class="badge">Urgence 24h/24 · 7j/7</span><h1>AGP Plomberie<span>Experts en plomberie</span></h1><p class="sub">Votre entreprise locale de confiance a Nice. Intervention d'urgence 24h/24 et 7j/7, projets de plomberie pris en charge rapidement, residentiel et commercial.</p><div class="btns"><a class="btn btn-accent" href="tel:+33607731669">Appeler l'urgence</a><a class="btn btn-line" href="contact.html">Devis gratuit</a></div></div></section><section><div class="wrap"><div class="sec-head ctr"><div class="kicker ctr">Nos services</div><h2 class="sec">Tout pour votre plomberie</h2><p class="lead" style="margin-inline:auto">Du depannage d urgence a l installation complete, residentiel comme commercial.</p></div><div class="cards"><a class="svc reveal" href="urgence.html"><div class="ph"><img src="img/leak.jpg" alt="Fuite d eau"></div><div class="bd"><div class="n">01</div><h3>Fuite d eau</h3><p>Reparation de fuite d eau, recherche et intervention rapide.</p><span class="go">Voir &rsaquo;</span></div></a><a class="svc reveal" href="services.html"><div class="ph"><img src="img/tap.jpg" alt="Chauffe-eau"></div><div class="bd"><div class="n">02</div><h3>Chauffe-eau</h3><p>Installation de chauffe-eau adaptee a vos besoins.</p><span class="go">Voir &rsaquo;</span></div></a><a class="svc reveal" href="services.html"><div class="ph"><img src="img/unclog.jpg" alt="Debouchage"></div><div class="bd"><div class="n">03</div><h3>Debouchage</h3><p>Debouchage de canalisation, residentiel et commercial.</p><span class="go">Voir &rsaquo;</span></div></a></div></div></section><section class="band"><div class="wrap"><div class="stats"><div class="s reveal"><b>24/7</b><span>urgence</span></div><div class="s reveal"><b>8+</b><span>prestations</span></div><div class="s reveal"><b>Pro</b><span>& particuliers</span></div><div class="s reveal"><b>06</b><span>Nice & environs</span></div></div></div></section><section><div class="wrap split rev"><div class="ph"><img src="img/manifold.jpg" alt=""></div><div><div class="kicker">Notre engagement</div><h2 style="margin-top:10px">Un partenaire<br>de confiance a Nice</h2><p class="lead">AGP Plomberie s'engage a fournir des services de qualite superieure, adaptes a chaque client, residentiel ou commercial. Une equipe experimentee, disponible en urgence comme pour vos projets.</p><div class="btns" style="justify-content:flex-start"><a class="btn btn-accent" href="contact.html">Devis gratuit</a></div></div></div></section>
+<footer class="ft">
+  <div class="wrap ft-in">
+    <div><a class="brand" href="index.html"><span class=mark>A</span><span><b>AGP Plomberie</b><small>Depannage urgence · Nice</small></span></a>
+      <p>AGP Plomberie, votre entreprise locale de confiance a Nice. Intervention d'urgence 24h/24 et 7j/7, residentiel et commercial.</p></div>
+    <div><h5>Navigation</h5><a class="fl" href="index.html">Accueil</a><a class="fl" href="services.html">Services</a><a class="fl" href="urgence.html">Urgence 24/7</a><a class="fl" href="contact.html">Contact</a></div>
+    <div><h5>Contact</h5><a class="fl" href="tel:+33607731669">06 07 73 16 69</a><a class="fl" href="mailto:agp.plomberie06@gmail.com">agp.plomberie06@gmail.com</a><a class="fl">Nice & environs</a></div>
   </div>
-
-  <section id="services">
-    <div class="wrap">
-      <div class="sec-head"><span class="kick">Prestations</span><h2>Ce que nous faisons</h2></div>
-      <div class="grid">
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg></div><h3>Plomberie</h3><p>Installation, réparation et entretien de toute votre plomberie.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17h.01"/></svg></div><h3>Urgence</h3><p>On se déplace rapidement à toute heure en cas de panne.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>Recherche de fuite</h3><p>On localise précisément la fuite et on la répare durablement.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3-2 4-2 7a2 2 0 0 0 4 0c2 2 2 4 2 5a6 6 0 0 1-12 0c0-4 5-6 5-9 1 .5 2 1 3 2 0-3-1-5 0-6Z"/></svg></div><h3>Chauffe-eau</h3><p>Remplacement, entretien et mise en service.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="methode">
-    <div class="wrap">
-      <div class="band-in">
-        <span class="kick">En clair</span>
-        <blockquote>Une fuite ou une panne, ça n’attend pas. On vient rapidement sur Nice, on cherche l’origine du problème, et on <span class="a">répare pour de bon</span>.</blockquote>
-        <span class="sign"><span class="m">AGP</span>AGP Plomberie · Nice</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <span class="kick">Contact</span>
-      <h2 style="font-size:clamp(2rem,4.4vw,3rem);margin-top:.6rem">Une urgence, un projet&nbsp;?</h2>
-      <div class="contact-card">
-        <div class="cc-left">
-          <h2>Écrivez-nous</h2>
-          <p>On répond vite, par e-mail. Pour une urgence, appelez directement.</p>
-          <a class="btn" href="mailto:agp.plomberie06@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            agp.plomberie06@gmail.com
-          </a>
-        </div>
-        <div class="cc-right">
-          <a class="row" href="tel:0607731669"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span><span><span class="rk">Téléphone</span><br><span class="rv">06 07 73 16 69</span></span></a>
-          <a class="row" href="mailto:agp.plomberie06@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><span class="rk">E-mail</span><br><span class="rv">agp.plomberie06@gmail.com</span></span></a>
-          <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><span class="rk">Zone</span><br><span class="rv">Nice et la Côte d’Azur</span></span></div>
-          <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><span class="rk">Disponibilité</span><br><span class="rv">7j/7 · urgences 24h/24</span></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="wrap">
-  <span class="fw">AGP Plomberie</span>
-  <span>© 2026 · Plombier &amp; dépannage d’urgence à Nice</span>
+  <div class="wrap legal"><span>© 2026 AGP Plomberie. </span><span>Aperçu de refonte realise pour demonstration.</span></div>
 </footer>
-</body>
-</html>
+<script defer src="animate.js"></script>
+</body></html>

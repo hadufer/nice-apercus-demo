@@ -2,228 +2,32 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nice Travaux Rénovation — Entreprise de rénovation à Nice</title>
-<meta name="description" content="Entreprise de rénovation à Nice. Une seule équipe pour tout le chantier, du sol au plafond, avec un devis sous 48 heures.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entreprise de renovation a Nice | Devis sous 48h</title>
+<meta name="description" content="Nice Travaux Renovation, entreprise generale de renovation a Nice. Renovation complete, salle de bains, cuisine, peinture, parquet. Devis sous 48h.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --terra:#c05a2b; --terra-d:#9c4520; --clay:#e2a07a; --plaster:#f5efe7; --plaster-2:#ece3d6;
-    --slate:#2c3540; --ink:#241c16; --muted:#6c6258; --line:#ddd2c2; --card:#fcf9f3; --blue:#3a5a7a;
-    --maxw:1120px;
-  }
-  *{box-sizing:border-box;margin:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{font-family:Archivo,system-ui,sans-serif;color:var(--ink);background:var(--plaster);
-    line-height:1.62;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.015em}
-  p{text-wrap:pretty}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:26px}
-  svg{display:block}
-  .kick{font-family:Archivo;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra-d)}
-
-  header{position:sticky;top:0;z-index:40;background:rgba(245,239,231,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{display:flex;align-items:center;gap:.6rem;font-family:Fraunces;font-weight:600;font-size:1.16rem;letter-spacing:-.01em}
-  .brand .m{width:40px;height:40px;border-radius:9px;background:var(--terra);color:#fff;display:grid;place-items:center;font-family:Archivo;font-weight:700;font-size:.8rem}
-  .nav-links{display:flex;gap:1.8rem;align-items:center}
-  .nav-links a{font-family:Archivo;font-size:.92rem;color:var(--muted);font-weight:500}
-  .nav-links a:hover{color:var(--ink)}
-  .nav-tel{font-family:Archivo;display:inline-flex;align-items:center;gap:.45rem;color:#fff;background:var(--terra);padding:.55rem .95rem;border-radius:9px;font-weight:600;font-size:.9rem}
-  .nav-tel svg{width:15px;height:15px}
-  @media(max-width:860px){.nav-links a:not(.nav-tel){display:none}}
-
-  /* hero — blueprint grid */
-  .hero{position:relative;overflow:hidden;padding:84px 0 0;
-    background-image:linear-gradient(rgba(58,90,122,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(58,90,122,.06) 1px,transparent 1px);
-    background-size:40px 40px}
-  .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;align-items:center;padding-bottom:72px}
-  @media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:2.2rem;padding-bottom:56px}}
-  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:1.1rem 0 1.2rem;max-width:15ch;font-weight:600}
-  .hero h1 em{font-style:italic;color:var(--terra)}
-  .hero-lead{font-size:1.18rem;color:var(--muted);max-width:44ch;margin-bottom:2rem}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem}
-  .btn{display:inline-flex;align-items:center;gap:.55rem;font-family:Archivo;font-weight:600;font-size:1rem;
-    padding:.9rem 1.4rem;border-radius:10px;border:1.6px solid transparent;
-    transition:transform .16s,background .16s,border-color .16s;min-height:52px}
-  .btn svg{width:18px;height:18px}
-  .btn-primary{background:var(--terra);color:#fff;box-shadow:0 12px 26px -14px var(--terra)}
-  .btn-primary:hover{background:var(--terra-d);transform:translateY(-2px)}
-  .btn-ghost{border-color:var(--line);color:var(--ink);background:rgba(252,249,243,.7)}
-  .btn-ghost:hover{border-color:var(--terra);color:var(--terra)}
-  /* devis 48h ticket */
-  .ticket{background:var(--slate);color:var(--plaster);border-radius:16px;padding:2rem;position:relative;overflow:hidden;
-    box-shadow:0 30px 60px -32px rgba(44,53,64,.6)}
-  .ticket::before{content:"";position:absolute;left:0;top:50%;width:18px;height:18px;border-radius:50%;background:var(--plaster);transform:translate(-50%,-50%)}
-  .ticket::after{content:"";position:absolute;right:0;top:50%;width:18px;height:18px;border-radius:50%;background:var(--plaster);transform:translate(50%,-50%)}
-  .ticket .t{font-family:Archivo;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clay)}
-  .ticket .big{font-family:Fraunces;font-size:3.2rem;font-weight:700;line-height:1;margin:.5rem 0 .2rem}
-  .ticket .big em{font-style:italic;color:var(--clay)}
-  .ticket .s{font-family:Archivo;color:rgba(245,239,231,.78);font-size:.95rem;max-width:24ch}
-  .ticket .dash{border-top:1px dashed rgba(245,239,231,.3);margin:1.1rem 0}
-  .ticket .g{font-family:Archivo;font-size:.92rem;font-weight:600;color:var(--plaster)}
-
-  /* etapes */
-  .etapes{background:var(--card);border:1px solid var(--line);border-radius:0;margin-top:0}
-  .etapes-wrap{padding:88px 0}
-  .etapes-head{text-align:center;max-width:38ch;margin:0 auto 3rem}
-  .etapes-head h2{font-size:clamp(2rem,4.4vw,3rem);margin-top:.6rem}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-  @media(max-width:760px){.steps{grid-template-columns:1fr}}
-  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.9rem 1.8rem;position:relative}
-  .step .n{font-family:Fraunces;font-style:italic;font-size:3rem;color:var(--clay);line-height:1;margin-bottom:.7rem}
-  .step h3{font-size:1.3rem;margin-bottom:.4rem}
-  .step p{font-family:Archivo;color:var(--muted);font-size:.96rem}
-
-  section{padding:84px 0}
-  .sec-head{max-width:38ch;margin-bottom:2.6rem}
-  .sec-head h2{font-size:clamp(2rem,4.4vw,3rem);margin-top:.6rem}
-
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:1.1rem}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.7rem 1.6rem;transition:transform .16s,box-shadow .16s}
-  .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(192,90,43,.4)}
-  .card .ic{width:50px;height:50px;border-radius:13px;background:var(--terra);color:#fff;display:grid;place-items:center;margin-bottom:1rem}
-  .card .ic svg{width:25px;height:25px}
-  .card h3{font-size:1.18rem;margin-bottom:.35rem}
-  .card p{font-family:Archivo;color:var(--muted);font-size:.95rem}
-
-  /* band */
-  .band{background:var(--slate);color:var(--plaster)}
-  .band-in{max-width:820px;margin-inline:auto;text-align:center;padding:18px 0}
-  .band .kick{color:var(--clay);display:block;margin-bottom:1.3rem}
-  .band blockquote{font-family:Fraunces;font-weight:500;font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.36}
-  .band blockquote em{font-style:italic;color:var(--clay)}
-  .band .sign{font-family:Archivo;display:inline-flex;align-items:center;gap:.6rem;margin-top:1.8rem;font-size:.9rem;color:rgba(245,239,231,.72);font-weight:600}
-  .band .sign .m{width:30px;height:30px;border-radius:8px;background:var(--terra);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.72rem}
-
-  /* contact */
-  .contact-card{display:grid;grid-template-columns:1.05fr .95fr;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 60px -38px rgba(44,53,64,.4);margin-top:2.4rem}
-  @media(max-width:820px){.contact-card{grid-template-columns:1fr}}
-  .cc-left{background:var(--terra);color:#fff;padding:2.8rem;position:relative;overflow:hidden}
-  .cc-left::after{content:"";position:absolute;right:-50px;bottom:-50px;width:180px;height:180px;border-radius:50%;border:2px solid rgba(255,255,255,.18)}
-  .cc-left h2{font-size:clamp(1.8rem,3.4vw,2.4rem);margin-bottom:.7rem;position:relative}
-  .cc-left p{font-family:Archivo;max-width:30ch;color:rgba(255,255,255,.9);font-size:1.05rem;position:relative}
-  .cc-left .btn{margin-top:1.7rem;background:var(--slate);color:var(--plaster);position:relative}
-  .cc-left .btn:hover{background:#1d242c;transform:translateY(-2px)}
-  .cc-right{background:var(--card);padding:2.4rem 2.6rem;display:grid;align-content:center}
-  .row{display:flex;align-items:center;gap:1rem;padding:1.05rem 0;border-bottom:1px solid var(--line)}
-  .row:last-child{border-bottom:0}
-  a.row:hover .rv{color:var(--terra-d)}
-  .row .ic{width:46px;height:46px;border-radius:12px;background:var(--plaster-2);color:var(--terra-d);display:grid;place-items:center;flex:0 0 auto}
-  .row .ic svg{width:21px;height:21px}
-  .rk{font-family:Archivo;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .rv{font-family:Fraunces;font-size:1.1rem;font-weight:500;transition:color .15s}
-
-  footer{padding:38px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;color:var(--muted);font-size:.88rem;font-family:Archivo}
-  footer .fw{font-family:Fraunces;font-size:1.1rem;color:var(--ink);font-weight:600}
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top"><span class="m">NTR</span>Nice Travaux Rénovation</a>
-    <nav class="nav-links">
-      <a href="#etapes">Comment ça marche</a>
-      <a href="#services">Prestations</a>
-      <a class="nav-tel" href="tel:0633631867">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-        06 33 63 18 67
-      </a>
-    </nav>
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="index.html"><span class="mark">N</span><span><b>Nice Travaux Renovation</b><small>Entreprise generale · Nice</small></span></a>
+    <nav class="nav"><a href="index.html" aria-current="page">Accueil</a><a href="renovation.html">Renovation</a><a href="contact.html">Contact</a></nav>
+    <a class="hdr-cta" href="contact.html">Devis sous 48h</a>
+    <button class="burger" aria-label="Menu" onclick="this.classList.toggle('x');document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
-</header>
-
-<main id="top">
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <span class="kick">Entreprise de rénovation · Nice</span>
-          <h1>Tout votre chantier, <em>une seule équipe</em>.</h1>
-          <p class="hero-lead">Peinture, sols, plomberie, électricité — du sol au plafond. Vous n’avez qu’un interlocuteur, pas dix artisans à coordonner. On chiffre tout sous 48 heures.</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="tel:0633631867">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-              06 33 63 18 67
-            </a>
-            <a class="btn btn-ghost" href="mailto:nicetravauxrenovation@gmail.com">Demander un devis</a>
-          </div>
-        </div>
-        <aside class="ticket">
-          <div class="t">Votre devis</div>
-          <div class="big">48<em>h</em></div>
-          <div class="s">Une étude chiffrée et détaillée, vite après votre appel.</div>
-          <div class="dash"></div>
-          <div class="g">Gratuit · sans engagement</div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="etapes" id="etapes">
-    <div class="wrap etapes-wrap">
-      <div class="etapes-head"><span class="kick">Comment ça marche</span><h2>Du premier appel aux clés en main</h2></div>
-      <div class="steps">
-        <div class="step"><div class="n">01</div><h3>On vient voir</h3><p>On évalue votre projet sur place et on écoute ce que vous voulez.</p></div>
-        <div class="step"><div class="n">02</div><h3>Devis sous 48h</h3><p>Une étude chiffrée et détaillée, rapidement après notre visite.</p></div>
-        <div class="step"><div class="n">03</div><h3>On réalise</h3><p>Une seule équipe pour tout le chantier, dans les délais annoncés.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="wrap">
-      <div class="sec-head"><span class="kick">Prestations</span><h2>Ce que nous faisons</h2></div>
-      <div class="grid">
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11 12 4l8 7M6 10v10h12V10"/></svg></div><h3>Rénovation complète</h3><p>Appartements et maisons rénovés du sol au plafond.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3 21 10l-8 8H8v-5l6-6Z"/><path d="M4 21c1-3 3-4 5-4"/></svg></div><h3>Peinture &amp; sols</h3><p>Peinture, enduits, parquet et carrelage posés proprement.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7a4 4 0 0 1 5 5l-9 9-3-3 9-9a4 4 0 0 1-2-2Z"/></svg></div><h3>Plomberie &amp; élec</h3><p>Réseaux refaits et remis aux normes par nos artisans.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><h3>Devis sous 48h</h3><p>Une étude chiffrée et détaillée, vite après votre appel.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <div class="band-in">
-        <span class="kick">Notre engagement</span>
-        <blockquote>On prend votre chantier <em>en entier</em>. Un seul interlocuteur, un devis sous 48h, et des délais tenus. Vous n’avez personne à coordonner.</blockquote>
-        <span class="sign"><span class="m">NTR</span>Nice Travaux Rénovation</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <span class="kick">Contact</span>
-      <h2 style="font-size:clamp(2rem,4.4vw,3rem);margin-top:.6rem">Un projet de rénovation&nbsp;?</h2>
-      <div class="contact-card">
-        <div class="cc-left">
-          <h2>Écrivez-nous</h2>
-          <p>On répond vite, par e-mail. Décrivez-nous votre projet, on revient vers vous.</p>
-          <a class="btn" href="mailto:nicetravauxrenovation@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            nicetravauxrenovation@gmail.com
-          </a>
-        </div>
-        <div class="cc-right">
-          <a class="row" href="tel:0633631867"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span><span><span class="rk">Téléphone</span><br><span class="rv">06 33 63 18 67</span></span></a>
-          <a class="row" href="mailto:nicetravauxrenovation@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><span class="rk">E-mail</span><br><span class="rv">nicetravauxrenovation@gmail.com</span></span></a>
-          <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><span class="rk">Adresse</span><br><span class="rv">26 rue Châteauneuf, 06000 Nice</span></span></div>
-          <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><span class="rk">Horaires</span><br><span class="rv">Lun au samedi, 8h–19h</span></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="wrap">
-  <span class="fw">Nice Travaux Rénovation</span>
-  <span>© 2026 · Entreprise de rénovation à Nice</span>
+  <div class="mnav" id="mnav"><a href="index.html" aria-current="page">Accueil</a><a href="renovation.html">Renovation</a><a href="contact.html">Contact</a><a href="contact.html">Devis sous 48h</a></div>
+</header><section class="hero" ><div class="bg"><img src="img/hero.jpg" alt=""></div><div class="hero-in"><span class="badge">Entreprise generale · Devis sous 48h</span><h1>Nice Travaux<span>Renovation</span></h1><p class="sub">Entreprise generale de renovation a Nice. De la salle de bains a l'appartement complet, on coordonne tous les corps de metier pour un chantier maitrise.</p><div class="btns"><a class="btn btn-accent" href="contact.html">Devis sous 48h</a><a class="btn btn-line" href="tel:+33633631867">Appeler</a></div></div></section><section><div class="wrap"><div class="sec-head ctr"><div class="kicker ctr">Nos travaux</div><h2 class="sec">La renovation, de A a Z</h2><p class="lead" style="margin-inline:auto">Un seul interlocuteur pour piloter l ensemble de votre chantier.</p></div><ul class="prest"><li class="reveal"><span class="chk"></span><span><b>Renovation complete</b> : <span class="d">appartements et maisons</span></span></li><li class="reveal"><span class="chk"></span><span><b>Salle de bains</b> : <span class="d">amenagement et plomberie</span></span></li><li class="reveal"><span class="chk"></span><span><b>Cuisine</b> : <span class="d">pose et raccordements</span></span></li><li class="reveal"><span class="chk"></span><span><b>Peinture & finitions</b> : <span class="d">murs, plafonds, boiseries</span></span></li><li class="reveal"><span class="chk"></span><span><b>Sols</b> : <span class="d">carrelage, parquet, poncage</span></span></li><li class="reveal"><span class="chk"></span><span><b>Ponçage de parquet</b> : <span class="d">remise a neuf des sols bois</span></span></li><li class="reveal"><span class="chk"></span><span><b>Platrerie & cloisons</b> : <span class="d">amenagement d espace</span></span></li><li class="reveal"><span class="chk"></span><span><b>Coordination de chantier</b> : <span class="d">tous corps de metier</span></span></li></ul></div></section><section class="band"><div class="wrap"><div class="stats"><div class="s reveal"><b>48h</b><span>devis</span></div><div class="s reveal"><b>Tous</b><span>corps de metier</span></div><div class="s reveal"><b>06</b><span>Alpes-Maritimes</span></div><div class="s reveal"><b>Cle</b><span>en main</span></div></div></div></section>
+<footer class="ft">
+  <div class="wrap ft-in">
+    <div><a class="brand" href="index.html"><span class=mark>N</span><span><b>Nice Travaux Renovation</b><small>Entreprise generale · Nice</small></span></a>
+      <p>Entreprise generale de renovation a Nice. Renovation complete, second oeuvre et finitions. Devis sous 48h.</p></div>
+    <div><h5>Navigation</h5><a class="fl" href="index.html">Accueil</a><a class="fl" href="renovation.html">Renovation</a><a class="fl" href="contact.html">Contact</a></div>
+    <div><h5>Contact</h5><a class="fl" href="tel:+33633631867">06 33 63 18 67</a><a class="fl" href="mailto:nicetravauxrenovation@gmail.com">nicetravauxrenovation@gmail.com</a><a class="fl">Nice · Alpes-Maritimes</a></div>
+  </div>
+  <div class="wrap legal"><span>© 2026 Nice Travaux Renovation. </span><span>Aperçu de refonte realise pour demonstration.</span></div>
 </footer>
-</body>
-</html>
+<script defer src="animate.js"></script>
+</body></html>
