@@ -1,0 +1,27 @@
+[menus] s à partager Toasts Pain au levain accompagné d'houmous, de betterave et de crème de feta 4,50 €
+[menus] lade verte Une salade fraîche du jardin aux légumes de saison et amandes grillées. Petite 3,50 €
+[menus] ​ Moyenne 5,50 €
+[menus] ers Légèrement piquant Sashimi de thon Thon poêlé, herbes fraîches et une touche de chili 4,50 €
+[menus] naux faits à la main, fourrés d'un mélange de fromages dans une sauce au pesto de basilic 6,50 €
+[menus] é, marinées dans un mélange de soja et de sésame, accompagnées de légumes de saison rôtis 7,50 €
+[menus] lien Poisson du jour Poisson du jour accompagné d'asperges et d'une crème de patate douce 8,00 €
+[menus] cacahuètes Steak juteux et tendre, cuit à votre goût, servi avec des légumes à la vapeur 8,00 €
+[menus] hamburger classique avec laitue, cornichons et tomates, servi avec des frites Champignon 7,00 €
+[menus] ​ Poulet 7,50 €
+[menus] ​ Boeuf 9,00 €
+[menus] pe panée Croustillante et dorée à l'extérieur, dans une chapelure d'herbes et de parmesan 4,00 €
+[menus] Servie avec de la glace à la vanille, de la sauce au caramel et un crumble aux cacahuètes 7,00 €
+[menus] égétarien Cheesecake classique Garni d'une couche de confiture de framboise et de fraises 6,50 €
+[menus] on meringuée Meringue au citron, crumble à la pistache, servis avec de la crème chantilly 5,50 €
+[menus] ruits à coque Mousse au chocolate Notre délicate mais riche mousse au chocolat. Une boule 4,00 €
+[menus] ​ Deux boules 7,00 €
+[menus] ​ Carrot cake Carrot cake aux saveurs légères, recouvert d'un glaçage au fromage frais 5,50 €
+[menus] Brownie Brownie fraîchement sorti du four, fourré aux pépites de chocolat noir et noix 5,00 €
+[menus] issez votre corps avec notre sélection de smoothies aux nombreux bienfaits pour la santé. 3,00 €
+[menus] fraîchissant d'orange fraîchement pressée, de pastèque, de carotte et de gingembre Petite 2,00 €
+[menus] ​ Moyenne 3,00 €
+[menus] ​ Grand 4,50 €
+[menus] ​ Vin Une sélection de vins rouge, blancs ou rosés 2,00 €
+[menus] Sodas Eau pétillante, Sprite, Pepsi et Coca Light 1,50 €
+[menus] Café Café torréfié local 1,50 €
+[menus] Cocktails Aperol Spritz, Gin Tonic, Mojito 2,50 €

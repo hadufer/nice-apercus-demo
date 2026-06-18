@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "rebuilt": "2026-06-18",
+    "note": "Reconstruit depuis les sites deployes apres perte de _index/. Emails fiables (10/10). Tel reels et URLs source gmail perdus avec le scrape brut - re-scraper via pipeline GMaps si besoin pour l'outreach.",
+    "live_gallery": "https://51.255.195.44.nip.io"
+  },
+  "leads": [
+    {
+      "slug": "01_plomberie-riviera",
+      "name": "Plomberie Riviera & Fils",
+      "vertical": "Plomberie/Chauffage/Clim RGE",
+      "email": "plomberie.riviera@gmail.com",
+      "phone_masked_demo": "+33749280047",
+      "phone_real": null,
+      "source_url": null,
+      "source_url_status": "lost_rescrape_via_gmaps",
+      "demo_url": "https://51.255.195.44.nip.io/01_plomberie-riviera/",
+      "cta_style": "Devis gratuit",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "02_le-siamois-traiteur",
+      "name": "Animation culinaire",
+      "vertical": "Traiteur",
+      "email": "le.siamois.foodie@gmail.com",
+      "phone_masked_demo": "+33660357074",
+      "phone_real": null,
+      "source_url": "https://www.foodiethai-siamois.com",
+      "source_url_status": "known",
+      "demo_url": "https://51.255.195.44.nip.io/02_le-siamois-traiteur/",
+      "cta_style": "Reserver / Demander un menu",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "03_spec-tobi",
+      "name": "SPEC TOBI",
+      "vertical": "Electricien/Plombier",
+      "email": "info@spectobi.fr",
+      "phone_masked_demo": "+33493216061",
+      "phone_real": null,
+      "source_url": "https://spectobi.fr",
+      "source_url_status": "known",
+      "demo_url": "https://51.255.195.44.nip.io/03_spec-tobi/",
+      "cta_style": "Devis gratuit",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "04_bellomo-plomberie",
+      "name": "Bellomo Plomberie",
+      "vertical": "Plomberie",
+      "email": "bellomoplomberie@gmail.com",
+      "phone_masked_demo": "+33620065077",
+      "phone_real": null,
+      "source_url": null,
+      "source_url_status": "lost_rescrape_via_gmaps",
+      "demo_url": "https://51.255.195.44.nip.io/04_bellomo-plomberie/",
+      "cta_style": "Devis gratuit",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "05_nice-travaux-renov",
+      "name": "Nice Travaux Renovation",
+      "vertical": "Renovation",
+      "email": "nicetravauxrenovation@gmail.com",
+      "phone_masked_demo": "+33633631867",
+      "phone_real": null,
+      "source_url": null,
+      "source_url_status": "lost_rescrape_via_gmaps",
+      "demo_url": "https://51.255.195.44.nip.io/05_nice-travaux-renov/",
+      "cta_style": "Devis gratuit",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "06_romain-plomberie",
+      "name": "Chauffage & gaz",
+      "vertical": "Plomberie/Chauffage",
+      "email": "contact@romain-plomberie.fr",
+      "phone_masked_demo": "+33609228631",
+      "phone_real": null,
+      "source_url": "https://romain-plomberie.fr",
+      "source_url_status": "known",
+      "demo_url": "https://51.255.195.44.nip.io/06_romain-plomberie/",
+      "cta_style": "Devis gratuit",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "07_agp-plomberie",
+      "name": "AGP Plomberie",
+      "vertical": "Plomberie urgence",
+      "email": "agp.plomberie06@gmail.com",
+      "phone_masked_demo": "+33607731669",
+      "phone_real": null,
+      "source_url": null,
+      "source_url_status": "lost_rescrape_via_gmaps",
+      "demo_url": "https://51.255.195.44.nip.io/07_agp-plomberie/",
+      "cta_style": "Devis gratuit",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "08_light-elec",
+      "name": "Light Elec",
+      "vertical": "Electricien",
+      "email": "lightelec.contact@gmail.com",
+      "phone_masked_demo": "+33659421348",
+      "phone_real": null,
+      "source_url": null,
+      "source_url_status": "lost_rescrape_via_gmaps",
+      "demo_url": "https://51.255.195.44.nip.io/08_light-elec/",
+      "cta_style": "Devis gratuit",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "09_atelier-du-traiteur",
+      "name": "L'Atelier du Traiteur",
+      "vertical": "Traiteur",
+      "email": "latelierdutraiteur.stjeannet@gmail.com",
+      "phone_masked_demo": "+33489158465",
+      "phone_real": null,
+      "source_url": "http://latelierdutraiteur.com",
+      "source_url_status": "known",
+      "demo_url": "https://51.255.195.44.nip.io/09_atelier-du-traiteur/",
+      "cta_style": "Reserver / Demander un menu",
+      "outreach_status": "not_contacted"
+    },
+    {
+      "slug": "10_lm-artisan",
+      "name": "L.M l'Artisan",
+      "vertical": "Multiservices",
+      "email": "lionel.mehlmann@free.fr",
+      "phone_masked_demo": null,
+      "phone_real": null,
+      "source_url": null,
+      "source_url_status": "lost_rescrape_via_gmaps",
+      "demo_url": "https://51.255.195.44.nip.io/10_lm-artisan/",
+      "cta_style": "Devis gratuit",
+      "outreach_status": "not_contacted"
+    }
+  ]
+}
