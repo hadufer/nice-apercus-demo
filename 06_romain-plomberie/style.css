@@ -152,3 +152,14 @@ h2.sec{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:
 .js-anim .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+/* ---- Animation pass (CSS-sober tier): hero rise + slow scale, reveals gated by .js-anim ---- */
+@media(prefers-reduced-motion:no-preference){
+  .js-anim .hero .bg img{animation:heroScale 1.4s cubic-bezier(.16,1,.3,1) both}
+  .js-anim .hero-in>*{animation:heroRise .8s cubic-bezier(.16,1,.3,1) both}
+  .js-anim .hero-in>*:nth-child(1){animation-delay:.12s}
+  .js-anim .hero-in>*:nth-child(2){animation-delay:.22s}
+  .js-anim .hero-in>*:nth-child(3){animation-delay:.32s}
+  .js-anim .hero-in>*:nth-child(4){animation-delay:.42s}
+  @keyframes heroScale{from{transform:scale(1.12);filter:brightness(.82)}to{transform:scale(1.06);filter:brightness(1)}}
+  @keyframes heroRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+}
