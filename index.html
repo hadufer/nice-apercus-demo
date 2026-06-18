@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8">
+<script>try{if(sessionStorage.getItem("apercus_gate_ok")!=="1")document.documentElement.className="gated";}catch(e){document.documentElement.className="gated";}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Aperçus de sites · Nice &amp; Côte d’Azur</title>
@@ -21,8 +22,29 @@
  .body h3{font-size:1.3rem;margin:.6rem 0 .25rem}
  .mail{font-size:.85rem;color:#7f8895;word-break:break-all}
  footer{margin-top:3.4rem;color:#6b7280;font-size:.85rem;border-top:1px solid #262b35;padding-top:1.4rem}
+ /* gate */
+ html.gated body>.wrap{filter:blur(14px);pointer-events:none;user-select:none}
+ #gate{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(10,12,16,.92);backdrop-filter:blur(8px)}
+ html.gated #gate{display:flex}
+ .gate-card{background:#181b22;border:1px solid #2e3542;border-radius:16px;padding:34px 30px;width:min(360px,90vw);text-align:center;box-shadow:0 30px 70px -30px rgba(0,0,0,.9)}
+ .gate-card .lock{font-size:1.7rem}
+ .gate-card h2{font-family:Fraunces,Georgia,serif;font-size:1.4rem;margin:.5rem 0 .2rem;color:#f3f4f6}
+ .gate-card p{color:#9aa3af;font-size:.9rem;margin-bottom:1.1rem}
+ .gate-card input{width:100%;padding:.7rem .85rem;border-radius:10px;border:1px solid #2e3542;background:#0f1115;color:#f3f4f6;font-size:1rem;outline:none}
+ .gate-card input:focus{border-color:#5b6b86}
+ .gate-card button{width:100%;margin-top:.7rem;padding:.7rem;border:0;border-radius:10px;background:#e7c884;color:#1a1205;font-weight:700;font-size:1rem;cursor:pointer;font-family:Inter,sans-serif}
+ .gate-card button:hover{background:#f0d597}
+ .gate-card .err{color:#e07a7a;font-size:.82rem;min-height:1.1em;margin-top:.55rem}
 </style></head>
-<body><div class="wrap">
+<body><div id="gate"><div class="gate-card">
+  <div class="lock">&#128274;</div>
+  <h2>Acces prive</h2>
+  <p>Cette page est reservee. Entrez le mot de passe pour voir les apercus.</p>
+  <input id="gate-pw" type="password" autocomplete="off" placeholder="Mot de passe" autofocus>
+  <button id="gate-go">Entrer</button>
+  <div class="err" id="gate-err"></div>
+</div></div>
+<div class="wrap">
  <header>
   <h1>Aperçus de sites · Nice &amp; Côte d’Azur</h1>
   <p>10 maquettes de sites, une direction artistique propre à chaque activité. Cliquez une carte pour ouvrir l’aperçu en plein écran.</p>
@@ -110,4 +132,29 @@
     </a>
  </div>
  <footer>Maquettes de démonstration · 2026-06-18</footer>
-</div></body></html>
+</div>
+<script>
+(function(){
+  var KEY="apercus_gate_ok", PW="hassan";
+  var root=document.documentElement;
+  try{ if(sessionStorage.getItem(KEY)==="1"){ return; } }catch(e){}
+  root.classList.add("gated");
+  function check(){
+    var v=(document.getElementById("gate-pw").value||"").trim().toLowerCase();
+    if(v===PW){
+      try{ sessionStorage.setItem(KEY,"1"); }catch(e){}
+      root.classList.remove("gated");
+    }else{
+      document.getElementById("gate-err").textContent="Mot de passe incorrect";
+      document.getElementById("gate-pw").value="";
+    }
+  }
+  document.addEventListener("DOMContentLoaded",function(){
+    var go=document.getElementById("gate-go"), pw=document.getElementById("gate-pw");
+    go.addEventListener("click",check);
+    pw.addEventListener("keydown",function(e){ if(e.key==="Enter") check(); });
+    pw.focus();
+  });
+})();
+</script>
+</body></html>
