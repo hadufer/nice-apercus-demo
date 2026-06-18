@@ -2,7 +2,7 @@
   "_meta": {
     "rebuilt": "2026-06-18",
     "note": "Reconstruit depuis les sites deployes apres perte de _index/. Emails fiables (10/10). Tel reels et URLs source gmail perdus avec le scrape brut - re-scraper via pipeline GMaps si besoin pour l'outreach.",
-    "live_gallery": "https://51.255.195.44.nip.io"
+    "live_gallery": "https://demo.azuradev.com"
   },
   "leads": [
     {
@@ -14,22 +14,26 @@
       "phone_real": null,
       "source_url": null,
       "source_url_status": "lost_rescrape_via_gmaps",
-      "demo_url": "https://51.255.195.44.nip.io/01_plomberie-riviera/",
+      "demo_url": "https://demo.azuradev.com/01_plomberie-riviera/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "RGE QualiPAC et Qualibois, promo clim Panasonic affichee"
     },
     {
       "slug": "02_le-siamois-traiteur",
-      "name": "Animation culinaire",
+      "name": "Le Siamois",
       "vertical": "Traiteur",
       "email": "le.siamois.foodie@gmail.com",
       "phone_masked_demo": "+33660357074",
       "phone_real": null,
       "source_url": "https://www.foodiethai-siamois.com",
       "source_url_status": "known",
-      "demo_url": "https://51.255.195.44.nip.io/02_le-siamois-traiteur/",
+      "demo_url": "https://demo.azuradev.com/02_le-siamois-traiteur/",
       "cta_style": "Reserver / Demander un menu",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "cuisine thai, formules cocktail/buffet/chef a domicile"
     },
     {
       "slug": "03_spec-tobi",
@@ -40,9 +44,11 @@
       "phone_real": null,
       "source_url": "https://spectobi.fr",
       "source_url_status": "known",
-      "demo_url": "https://51.255.195.44.nip.io/03_spec-tobi/",
+      "demo_url": "https://demo.azuradev.com/03_spec-tobi/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "electricite et plomberie, savoir-faire sur 3 generations"
     },
     {
       "slug": "04_bellomo-plomberie",
@@ -53,9 +59,11 @@
       "phone_real": null,
       "source_url": null,
       "source_url_status": "lost_rescrape_via_gmaps",
-      "demo_url": "https://51.255.195.44.nip.io/04_bellomo-plomberie/",
+      "demo_url": "https://demo.azuradev.com/04_bellomo-plomberie/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "plomberie 24/7 avec grille tarifs affichee"
     },
     {
       "slug": "05_nice-travaux-renov",
@@ -66,22 +74,26 @@
       "phone_real": null,
       "source_url": null,
       "source_url_status": "lost_rescrape_via_gmaps",
-      "demo_url": "https://51.255.195.44.nip.io/05_nice-travaux-renov/",
+      "demo_url": "https://demo.azuradev.com/05_nice-travaux-renov/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "renovation generale, devis sous 48h"
     },
     {
       "slug": "06_romain-plomberie",
-      "name": "Chauffage & gaz",
+      "name": "Romain Plomberie",
       "vertical": "Plomberie/Chauffage",
       "email": "contact@romain-plomberie.fr",
       "phone_masked_demo": "+33609228631",
       "phone_real": null,
       "source_url": "https://romain-plomberie.fr",
       "source_url_status": "known",
-      "demo_url": "https://51.255.195.44.nip.io/06_romain-plomberie/",
+      "demo_url": "https://demo.azuradev.com/06_romain-plomberie/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "plomberie, chauffage, clim et piscine"
     },
     {
       "slug": "07_agp-plomberie",
@@ -92,9 +104,11 @@
       "phone_real": null,
       "source_url": null,
       "source_url_status": "lost_rescrape_via_gmaps",
-      "demo_url": "https://51.255.195.44.nip.io/07_agp-plomberie/",
+      "demo_url": "https://demo.azuradev.com/07_agp-plomberie/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "plomberie urgence 24/7"
     },
     {
       "slug": "08_light-elec",
@@ -105,9 +119,11 @@
       "phone_real": null,
       "source_url": null,
       "source_url_status": "lost_rescrape_via_gmaps",
-      "demo_url": "https://51.255.195.44.nip.io/08_light-elec/",
+      "demo_url": "https://demo.azuradev.com/08_light-elec/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "electricite generale, mise aux normes"
     },
     {
       "slug": "09_atelier-du-traiteur",
@@ -118,9 +134,11 @@
       "phone_real": null,
       "source_url": "http://latelierdutraiteur.com",
       "source_url_status": "known",
-      "demo_url": "https://51.255.195.44.nip.io/09_atelier-du-traiteur/",
+      "demo_url": "https://demo.azuradev.com/09_atelier-du-traiteur/",
       "cta_style": "Reserver / Demander un menu",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Saint-Jeannet",
+      "hook_detail": "traiteur, carte faite maison, paellas geantes"
     },
     {
       "slug": "10_lm-artisan",
@@ -131,9 +149,11 @@
       "phone_real": null,
       "source_url": null,
       "source_url_status": "lost_rescrape_via_gmaps",
-      "demo_url": "https://51.255.195.44.nip.io/10_lm-artisan/",
+      "demo_url": "https://demo.azuradev.com/10_lm-artisan/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted"
+      "outreach_status": "not_contacted",
+      "city": "Nice",
+      "hook_detail": "multiservices second oeuvre interieur"
     }
   ]
 }

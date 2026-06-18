@@ -1,0 +1,38 @@
+http:
+  routers:
+    app-quantify-cross-platform-program-cnp4ml-router-12:
+      rule: Host(`51.255.195.44.nip.io`)
+      service: app-quantify-cross-platform-program-cnp4ml-service-12
+      middlewares:
+        - redirect-to-https
+      entryPoints:
+        - web
+    app-quantify-cross-platform-program-cnp4ml-router-websecure-12:
+      rule: Host(`51.255.195.44.nip.io`)
+      service: app-quantify-cross-platform-program-cnp4ml-service-12
+      middlewares: []
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
+    app-quantify-cross-platform-program-cnp4ml-router-demo:
+      rule: Host(`demo.azuradev.com`)
+      service: app-quantify-cross-platform-program-cnp4ml-service-12
+      middlewares:
+        - redirect-to-https
+      entryPoints:
+        - web
+    app-quantify-cross-platform-program-cnp4ml-router-websecure-demo:
+      rule: Host(`demo.azuradev.com`)
+      service: app-quantify-cross-platform-program-cnp4ml-service-12
+      middlewares: []
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
+  services:
+    app-quantify-cross-platform-program-cnp4ml-service-12:
+      loadBalancer:
+        servers:
+          - url: http://app-quantify-cross-platform-program-cnp4ml:80
+        passHostHeader: true
