@@ -167,6 +167,17 @@ footer{background:var(--jade-d);color:rgba(246,241,228,.78);padding:56px 0 26px}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js-anim .reveal{opacity:1!important;transform:none!important;transition:none!important}}
 
+/* tablette (600-779) : diptyque + bandes en 2 col, sortir du mobile empile */
+@media(min-width:600px){
+  .hero .dip{grid-template-columns:1fr 1fr}
+  .hero .panel{min-height:50vh}
+  .statband .row{grid-template-columns:repeat(4,1fr)}
+  .band{grid-template-columns:1fr 1fr}
+  .band.rev .ph{order:2}
+  .mosaic{grid-template-columns:repeat(3,1fr);grid-auto-rows:170px}
+  .quotes{grid-template-columns:repeat(3,1fr)}
+  .fgrid{grid-template-columns:2fr 1fr 1fr}
+}
 /* desktop */
 @media(min-width:780px){
   .hero .dip{grid-template-columns:1fr 1fr}
