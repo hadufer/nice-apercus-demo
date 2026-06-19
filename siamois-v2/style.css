@@ -92,6 +92,9 @@ header.nav{position:absolute;top:0;left:0;right:0;z-index:40}
 .statband span{font-size:.84rem;opacity:.78;margin-top:4px;display:block}
 
 section{padding:88px 0}
+/* sections a bandes full-bleed : le titre garde son padding-top, mais les bandes
+   touchent deja le bas -> pas de padding-bottom (sinon vide mort sous la derniere bande) */
+#formules{padding-bottom:0}
 .sec-head{max-width:640px;margin:0 auto 52px;text-align:center}
 .sec-head h2{font-size:clamp(2.2rem,5vw,3.4rem);margin:14px 0 12px}
 .sec-head p{color:var(--ink-soft);font-size:1.1rem}
