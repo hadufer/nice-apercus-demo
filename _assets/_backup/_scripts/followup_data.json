@@ -1,0 +1,19 @@
+{
+  "from": "Hassan <hassan@azuradev.com>",
+  "signature_text": "Hassan DUFER\nAzuraDev, sites et acquisition digitale a Nice\n06 85 06 73 47 . azuradev.com",
+  "base_demo": "https://demo.azuradev.com/",
+  "excluded": {
+    "spec-tobi": "email info@spectobi.fr bounce (boite morte) - contact telephone uniquement"
+  },
+  "leads": [
+    {"slug": "plomberie-riviera", "email": "plomberie.riviera@gmail.com", "name": "Plomberie Riviera & Fils", "vertical": "artisan", "metier": "plombier chauffagiste RGE", "hook": "QualiPAC, Qualibois, la promo clim Panasonic", "send_id": "c453312c-760b-4eec-a28c-861b245d383c"},
+    {"slug": "le-siamois-traiteur", "email": "le.siamois.foodie@gmail.com", "name": "Le Siamois", "vertical": "resto", "metier": "traiteur thai", "hook": "formules cocktail, buffet, chef a domicile", "send_id": "95dc4823-0e9e-4acb-a117-1275342d4b00"},
+    {"slug": "bellomo-plomberie", "email": "bellomoplomberie@gmail.com", "name": "Bellomo Plomberie", "vertical": "artisan", "metier": "plombier 24/7", "hook": "grille de tarifs affichee clairement", "send_id": "2341ecd1-1cd7-4da5-8350-7a7aa9b7926b"},
+    {"slug": "nice-travaux-renov", "email": "nicetravauxrenovation@gmail.com", "name": "Nice Travaux Renovation", "vertical": "artisan", "metier": "entreprise de renovation", "hook": "le devis sous 48h", "send_id": "30289e30-8b03-416e-b0c9-da97ca1c1b52"},
+    {"slug": "romain-plomberie", "email": "contact@romain-plomberie.fr", "name": "Romain Plomberie", "vertical": "artisan", "metier": "plombier chauffagiste", "hook": "plomberie, chauffage, clim, piscine", "send_id": "cfa540c2-b09b-48f6-9e70-a24512c48bdd"},
+    {"slug": "agp-plomberie", "email": "agp.plomberie06@gmail.com", "name": "AGP Plomberie", "vertical": "artisan", "metier": "plombier d'urgence", "hook": "le reflexe d'appel en urgence sur mobile", "send_id": "60de0442-96ec-40e9-8cd4-d6176934b06e"},
+    {"slug": "light-elec", "email": "lightelec.contact@gmail.com", "name": "Light Elec", "vertical": "artisan", "metier": "electricien", "hook": "une presentation soignee qui inspire confiance", "send_id": "7ef453ec-3296-486f-b843-fd09c424ffb3"},
+    {"slug": "atelier-du-traiteur", "email": "latelierdutraiteur.stjeannet@gmail.com", "name": "L'Atelier du Traiteur", "vertical": "resto", "metier": "traiteur", "hook": "carte faite maison, paellas geantes", "send_id": "b4deb7aa-2761-496e-b0c8-f463c478b3d3"},
+    {"slug": "lm-artisan", "email": "lionel.mehlmann@free.fr", "name": "L.M l'Artisan", "vertical": "artisan", "metier": "artisan multiservices", "hook": "chantiers et bouche-a-oreille (second oeuvre interieur)", "send_id": "82be4221-4ec6-4a35-93d2-fe8a645833ec"}
+  ]
+}
