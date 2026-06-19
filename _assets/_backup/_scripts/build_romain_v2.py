@@ -1,0 +1,122 @@
+# -*- coding: utf-8 -*-
+"""Pilote archetype PLOMBIER : Romain Plomberie (hero bento + signature dispo/zones)."""
+import os
+OUT="deploy/romain-v2"
+PHONE="06 09 22 86 31"; TEL="+336****8631"
+
+NAV=[("index.html","Accueil"),("#services","Prestations"),("#avis","Avis"),("#devis","Devis")]
+def navlinks(): return "\n".join(f'<a href="{h}">{l}</a>' for h,l in NAV)
+
+HEAD=f"""<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Romain Plomberie - plombier chauffagiste a Nice - depannage, renovation, clim</title>
+<meta name="description" content="Romain Plomberie, plombier chauffagiste a Nice. Depannage, renovation salle de bains, chauffage gaz, climatisation, piscine. Devis gratuit, intervention rapide.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="nav"><div class="wrap">
+  <a href="index.html" class="brand"><span class="dot"></span>Romain Plomberie</a>
+  <nav>{navlinks()}</nav>
+  <a class="tel" href="tel:{TEL}">{PHONE}</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-menu" id="mm">{navlinks()}<a class="btn" style="margin-top:12px;justify-content:center" href="#devis">Devis gratuit</a></div>
+</header>
+<div class="dispo"><div class="wrap">
+  <span class="badge">Disponible 6j/7</span>
+  <span class="zones">Nice · Cagnes-sur-Mer · Saint-Laurent-du-Var · Villeneuve-Loubet · Antibes</span>
+</div></div>"""
+
+FOOT=f"""<footer><div class="wrap"><div class="fgrid">
+  <div><div class="brand" style="font-size:1.4rem;margin-bottom:12px"><span class="dot"></span>Romain Plomberie</div>
+    <p style="text-transform:none">Plombier chauffagiste a Nice et sur la Cote d'Azur. Depannage, renovation, chauffage, climatisation et piscine. Un seul artisan, du devis aux finitions.</p></div>
+  <div><h4>Prestations</h4><a href="#services">Depannage</a><a href="#services">Renovation</a><a href="#services">Chauffage & gaz</a><a href="#services">Climatisation</a><a href="#services">Piscine</a></div>
+  <div><h4>Contact</h4><a href="tel:{TEL}">{PHONE}</a><p>Nice et alentours (06)</p><a href="#devis" class="btn" style="margin-top:10px">Devis gratuit</a></div>
+</div><div class="fbot"><span>(c) 2026 Romain Plomberie - Nice (06)</span><span class="demo">Demo realisee par Azura Dev</span></div>
+</div></footer>
+<script defer src="animate.js"></script>
+<script>var b=document.getElementById('burger'),m=document.getElementById('mm');
+if(b){{b.addEventListener('click',function(){{b.classList.toggle('open');m.classList.toggle('open');}});}}</script>
+</body></html>"""
+
+REVIEWS=[
+ ("Jean-Marc P.","Fuite un dimanche, Romain est venu vite et a regle le probleme proprement. Tarif honnete, je garde le numero."),
+ ("Sandra L.","Refait toute notre salle de bains, douche a l'italienne impeccable. Ponctuel, soigne, bon conseil sur les materiaux."),
+ ("Thierry G.","Installation d'une clim multi-split nickel apres etude. Travail propre, chantier laisse net. Tres pro."),
+]
+def quotes():
+    return "".join(f'<div class="quote reveal"><div class="stars">★★★★★</div><p>« {t} »</p><div class="who">{w}</div></div>' for w,t in REVIEWS)
+
+SERVICES=[
+ ("01","Depannage","Fuites, chauffe-eau, robinetterie, debouchage, recherche de fuite. Intervention rapide.","leak-pipe.jpg"),
+ ("02","Renovation & creation","Salle de bains, douche a l'italienne, WC suspendu, reseaux d'eau neufs.","shower-italian.jpg"),
+ ("03","Chauffage & gaz","Chaudiere, radiateurs, chaufferie, gaz de ville, butane et propane.",None),
+ ("04","Climatisation","Mono-split, multi-split, gainables et VMC, apres etude personnalisee.","clim.jpg"),
+ ("05","Piscine","Pompe a chaleur, filtration, electrolyse au sel, regulation du pH.","pool-pump.jpg"),
+]
+def svc_bento():
+    out=""
+    # feat = renovation (avec photo en grand), les autres en tuiles
+    for idx,nm,desc,img in SERVICES:
+        feat=" feat" if nm.startswith("Renovation") else ""
+        out+=f"""<div class="svc{feat} reveal"><span class="idx">{idx}</span><h3>{nm}</h3><p>{desc}</p></div>"""
+    return out
+
+HOME=HEAD+f"""
+<section class="hero">
+  <div class="wrap">
+    <div class="bento">
+      <div class="tile main reveal">
+        <span class="kick">Plombier chauffagiste · Nice</span>
+        <h1>Du travail<br><em>soigne</em>, vite</h1>
+        <p>De la fuite urgente a la renovation complete, tout passe par la meme main. Un seul artisan, du devis aux finitions.</p>
+        <div class="acts"><a class="btn" href="#devis">Devis gratuit</a><a class="btn line" href="tel:{TEL}">{PHONE}</a></div>
+      </div>
+      <div class="tile photo big reveal"><img src="img/bath-hero.jpg" alt="Salle de bains renovee"><span class="cap">Renovation salle de bains</span></div>
+      <div class="tile note reveal"><div class="stars">★★★★★</div><b>5,0</b><span>avis clients Google</span></div>
+      <div class="tile photo reveal"><img src="img/clim.jpg" alt="Climatisation"><span class="cap">Climatisation</span></div>
+      <div class="tile stat reveal"><b>5</b><span>metiers, un seul artisan</span></div>
+      <div class="tile call reveal"><span>Urgence ? Appelez</span><b>{PHONE}</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head"><span class="kick">Cinq metiers, un seul artisan</span><h2>Nos prestations</h2>
+      <p>De la fuite urgente a la renovation complete, tout passe par la meme main.</p></div>
+    <div class="svc-bento">{svc_bento()}</div>
+  </div>
+</section>
+
+<div class="statband"><div class="wrap"><div class="row">
+  <div><b>6j/7</b><span>disponibilite</span></div>
+  <div><b>5</b><span>metiers maitrises</span></div>
+  <div><b>5,0</b><span>note Google</span></div>
+  <div><b>06</b><span>Nice et toute la Cote</span></div>
+</div></div></div>
+
+<section class="dark" id="avis">
+  <div class="wrap">
+    <div class="sec-head"><span class="kick">Ils ont fait appel</span><h2>Avis clients</h2>
+      <p>Depannage, renovation, climatisation : la voix de mes clients.</p></div>
+    <div class="quotes">{quotes()}</div>
+  </div>
+</section>
+
+<section id="devis">
+  <div class="wrap">
+    <div class="cta reveal">
+      <span class="kick" style="justify-content:center;color:#fff">Devis gratuit</span>
+      <h2>Un projet ou une urgence ?</h2>
+      <p>Devis gratuit et sans engagement. Reponse rapide, conseil honnete, travail soigne.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="tel:{TEL}">Appeler le {PHONE}</a>
+        <a class="btn line" href="tel:{TEL}">Demander un devis</a></div>
+    </div>
+  </div>
+</section>
+"""+FOOT
+
+open(os.path.join(OUT,"index.html"),"w",encoding="utf-8").write(HOME)
+print("wrote index.html",len(HOME),"chars")

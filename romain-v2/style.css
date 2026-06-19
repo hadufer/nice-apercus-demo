@@ -1,0 +1,175 @@
+/* ============================================================
+   Romain Plomberie - DA "Acier & Cuivre"
+   ARCHETYPE TEST : hero BENTO (H6, tuiles modulaires) + signature
+   BANDEAU DISPO/ZONES (sans dot pulsant) + B6 bento services +
+   B13 stats + B12 pull-quotes. CTA = Devis gratuit (artisan). 0 em/en dash.
+   ============================================================ */
+:root{
+  --anthr:#1f2429;       /* anthracite */
+  --anthr-2:#2b3137;
+  --steel:#3f6e8c;       /* bleu acier */
+  --steel-l:#5b91b3;
+  --cuivre:#c0703e;      /* cuivre/laiton */
+  --cuivre-l:#d98e5a;
+  --fog:#eef1f3;         /* gris clair */
+  --fog-2:#e0e5e9;
+  --ink:#1a1f24;
+  --ink-soft:#56616b;
+  --line:rgba(31,36,41,.14);
+  --maxw:1200px;
+  --ff-display:"Barlow Condensed",Arial,sans-serif;
+  --ff-body:"Inter",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);color:var(--ink);background:var(--fog);
+  line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--ff-display);font-weight:600;line-height:1.0;letter-spacing:.01em;text-transform:uppercase}
+.kick{display:inline-flex;align-items:center;gap:9px;font-size:.74rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--cuivre)}
+.kick::before{content:"";width:7px;height:7px;background:var(--cuivre);transform:rotate(45deg)}
+
+/* header */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(31,36,41,.96);backdrop-filter:blur(10px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:18px}
+.brand{font-family:var(--ff-display);font-weight:600;font-size:1.5rem;text-transform:uppercase;color:var(--fog);
+  letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.brand .dot{width:10px;height:10px;background:var(--cuivre);transform:rotate(45deg);flex:none}
+.nav nav{display:none;gap:26px}
+.nav nav a{font-size:.88rem;font-weight:600;color:rgba(238,241,243,.8);text-transform:uppercase;letter-spacing:.04em;transition:color .2s}
+.nav nav a:hover{color:var(--cuivre-l)}
+.nav .tel{display:none;align-items:center;gap:8px;font-weight:700;font-size:1rem;color:var(--fog);
+  background:var(--cuivre);padding:9px 18px;border-radius:6px;transition:.2s}
+.nav .tel:hover{background:var(--cuivre-l)}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--fog);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;flex-direction:column;background:var(--anthr-2);padding:8px 24px 18px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:13px 0;border-bottom:1px solid rgba(238,241,243,.12);color:var(--fog);font-weight:600;text-transform:uppercase;font-size:.9rem}
+
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:6px;font-weight:700;
+  font-size:.92rem;background:var(--cuivre);color:#fff;border:0;cursor:pointer;text-transform:uppercase;
+  letter-spacing:.04em;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--cuivre-l)}
+.btn.steel{background:var(--steel)}.btn.steel:hover{background:var(--steel-l)}
+.btn.line{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn.line:hover{background:#fff;color:var(--anthr)}
+
+/* ============================================================
+   SIGNATURE PLOMBIER : bandeau DISPO + ZONES (statique, pas de dot pulsant)
+   ============================================================ */
+.dispo{background:var(--cuivre);color:#fff}
+.dispo .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 22px;padding:11px 24px;
+  font-size:.86rem;font-weight:600;text-align:center}
+.dispo .badge{display:inline-flex;align-items:center;gap:7px}
+.dispo .badge::before{content:"";width:8px;height:8px;background:#fff;transform:rotate(45deg);flex:none}
+.dispo .zones{opacity:.92}
+
+/* ============================================================
+   H6 - HERO BENTO : grille de tuiles modulaires inegales
+   ============================================================ */
+.hero{background:var(--anthr);padding:38px 0 46px}
+.hero .bento{display:grid;gap:14px;grid-template-columns:1fr;grid-auto-rows:minmax(120px,auto)}
+.tile{border-radius:12px;padding:26px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+/* tuile titre principale */
+.tile.main{background:linear-gradient(135deg,var(--anthr-2),var(--steel) 240%);color:var(--fog);justify-content:center;min-height:280px}
+.tile.main .kick{color:var(--cuivre-l)}
+.tile.main h1{font-size:clamp(2.6rem,8vw,4.4rem);color:#fff;margin:12px 0 14px}
+.tile.main h1 em{font-style:normal;color:var(--cuivre-l)}
+.tile.main p{font-family:var(--ff-body);color:rgba(238,241,243,.82);text-transform:none;font-size:1.05rem;margin-bottom:20px;max-width:440px;font-weight:400;line-height:1.5}
+.tile.main .acts{display:flex;gap:12px;flex-wrap:wrap}
+/* tuile photo */
+.tile.photo{padding:0;min-height:180px}
+.tile.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile.photo .cap{position:relative;z-index:2;color:#fff;font-family:var(--ff-display);font-size:1.3rem;
+  text-transform:uppercase;padding:18px;width:100%;background:linear-gradient(transparent,rgba(26,31,36,.85))}
+/* tuile note */
+.tile.note{background:var(--cuivre);color:#fff;align-items:flex-start;justify-content:center}
+.tile.note .stars{font-size:1.1rem;letter-spacing:2px}
+.tile.note b{font-family:var(--ff-display);font-size:2.6rem;line-height:1}
+.tile.note span{font-size:.85rem;opacity:.9;text-transform:none;font-family:var(--ff-body)}
+/* tuile stat/dispo */
+.tile.stat{background:var(--fog);color:var(--ink)}
+.tile.stat b{font-family:var(--ff-display);font-size:2.4rem;color:var(--steel);line-height:1;display:block}
+.tile.stat span{font-size:.85rem;color:var(--ink-soft);text-transform:none;font-family:var(--ff-body)}
+/* tuile cta tel */
+.tile.call{background:var(--steel);color:#fff;justify-content:center}
+.tile.call span{font-size:.82rem;opacity:.9;text-transform:uppercase;letter-spacing:.08em}
+.tile.call b{font-family:var(--ff-display);font-size:1.9rem;margin-top:4px}
+
+section{padding:76px 0}
+.sec-head{max-width:620px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2rem,5vw,3rem);margin:12px 0 10px}
+.sec-head p{color:var(--ink-soft);font-size:1.06rem;text-transform:none;font-family:var(--ff-body)}
+.dark{background:var(--anthr);color:var(--fog)}
+.dark .sec-head p{color:rgba(238,241,243,.7)}
+
+/* ============================================================
+   B6 - BENTO services : tuiles metiers inegales
+   ============================================================ */
+.svc-bento{display:grid;gap:14px;grid-template-columns:1fr}
+.svc{background:#fff;border-radius:12px;padding:26px;border:1px solid var(--line);position:relative;
+  transition:transform .25s,box-shadow .25s;overflow:hidden}
+.svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(31,36,41,.4)}
+.svc .idx{font-family:var(--ff-display);font-size:1.1rem;color:var(--cuivre);font-weight:700}
+.svc h3{font-size:1.5rem;margin:6px 0 8px}
+.svc p{color:var(--ink-soft);font-size:.98rem;text-transform:none;font-family:var(--ff-body)}
+.svc.feat{background:linear-gradient(135deg,var(--steel),var(--steel-l));color:#fff}
+.svc.feat .idx{color:#fff;opacity:.7}
+.svc.feat p{color:rgba(255,255,255,.9)}
+
+/* stats bande */
+.statband{background:var(--anthr-2);color:var(--fog);padding:40px 0}
+.statband .row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:center}
+.statband b{font-family:var(--ff-display);font-size:2.6rem;color:var(--cuivre-l);display:block;line-height:1}
+.statband span{font-size:.84rem;opacity:.78;margin-top:5px;display:block;text-transform:none;font-family:var(--ff-body)}
+
+/* pull quotes */
+.quotes{display:grid;gap:24px;grid-template-columns:1fr}
+.quote{background:#fff;border-radius:12px;padding:26px;border-left:4px solid var(--cuivre)}
+.dark .quote{background:var(--anthr-2);border-color:var(--cuivre)}
+.quote .stars{color:var(--cuivre);letter-spacing:2px;margin-bottom:12px}
+.quote p{font-size:1.04rem;font-style:italic;margin-bottom:14px;text-transform:none;font-family:var(--ff-body)}
+.dark .quote p{color:var(--fog)}
+.quote .who{font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;color:var(--steel)}
+.dark .quote .who{color:var(--cuivre-l)}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--cuivre),var(--cuivre-l));border-radius:14px;padding:54px 38px;text-align:center;color:#fff}
+.cta h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:12px}
+.cta p{margin-bottom:26px;text-transform:none;font-family:var(--ff-body);opacity:.95}
+.cta .btn{background:#fff;color:var(--cuivre)}
+.cta .btn.line{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+
+/* footer */
+footer{background:var(--anthr);color:rgba(238,241,243,.78);padding:52px 0 24px}
+.fgrid{display:grid;gap:28px;grid-template-columns:1fr}
+.fgrid h4{font-family:var(--ff-display);color:var(--fog);font-size:1.2rem;text-transform:uppercase;margin-bottom:12px}
+.fgrid a,.fgrid p{color:rgba(238,241,243,.7);font-size:.92rem;display:block;margin-bottom:8px}
+.fgrid a:hover{color:var(--cuivre-l)}
+.fbot{border-top:1px solid rgba(238,241,243,.14);margin-top:32px;padding-top:20px;display:flex;
+  flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:.8rem;color:rgba(238,241,243,.5)}
+.fbot .demo{color:var(--cuivre-l)}
+
+/* animations gated */
+.js-anim .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js-anim .reveal{opacity:1!important;transform:none!important;transition:none!important}}
+
+/* desktop */
+@media(min-width:780px){
+  .hero .bento{grid-template-columns:repeat(4,1fr);grid-auto-rows:150px}
+  .tile.main{grid-column:span 2;grid-row:span 2}
+  .tile.photo.big{grid-column:span 2;grid-row:span 2}
+  .svc-bento{grid-template-columns:repeat(3,1fr)}
+  .svc.feat{grid-column:span 1;grid-row:span 2;display:flex;flex-direction:column;justify-content:center}
+  .statband .row{grid-template-columns:repeat(4,1fr)}
+  .quotes{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:920px){.nav nav{display:flex}.nav .tel{display:inline-flex}.burger{display:none}}

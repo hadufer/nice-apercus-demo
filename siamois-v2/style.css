@@ -1,0 +1,182 @@
+/* ============================================================
+   Le Siamois - traiteur thai - DA "Laque & Jasmin"
+   ARCHETYPE TEST : hero DIPTYQUE (H9) + signature CARTE-MENU editoriale +
+   B1 bandes pleine largeur + B11 tableau prix editorial + B13 stats bande.
+   CTA = Reserver (coherence resto, JAMAIS devis). 0 em/en dash, 0 dot pulsant.
+   ============================================================ */
+:root{
+  --jade:#0f3d33;        /* vert laque profond */
+  --jade-d:#082a23;
+  --jade-l:#1c5e50;
+  --or:#c9a24b;          /* or thai */
+  --or-l:#e0c074;
+  --creme:#f6f1e4;       /* creme jasmin */
+  --creme-2:#ece3cf;
+  --ink:#1d231f;
+  --ink-soft:#54605a;
+  --rouge:#a8432e;       /* piment, accent ponctuel */
+  --line:rgba(15,61,51,.16);
+  --maxw:1200px;
+  --ff-display:"Cormorant Garamond",Georgia,serif;
+  --ff-body:"Inter",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);color:var(--ink);background:var(--creme);
+  line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+h1,h2,h3{font-family:var(--ff-display);font-weight:600;line-height:1.05;letter-spacing:-.005em}
+.th{font-family:var(--ff-body);color:var(--or);font-size:.9rem;letter-spacing:.06em;font-weight:500} /* thai deco */
+.kick{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--or)}
+.kick::before{content:"";width:7px;height:7px;background:var(--or);transform:rotate(45deg)}
+
+/* header */
+header.nav{position:absolute;top:0;left:0;right:0;z-index:40}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:82px;gap:20px}
+.brand{font-family:var(--ff-display);font-weight:600;font-size:1.55rem;color:var(--creme);display:flex;align-items:baseline;gap:10px}
+.brand .th{font-size:1rem}
+.nav nav{display:none;gap:28px}
+.nav nav a{font-size:.92rem;font-weight:500;color:rgba(246,241,228,.82);transition:color .2s}
+.nav nav a:hover{color:var(--or-l)}
+.nav .resa{display:none;align-items:center;font-weight:600;font-size:.9rem;
+  border:1.5px solid var(--or);color:var(--or-l);border-radius:999px;padding:9px 20px;transition:.25s}
+.nav .resa:hover{background:var(--or);color:var(--jade-d)}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:25px;height:2px;background:var(--creme);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:absolute;top:82px;left:0;right:0;flex-direction:column;
+  background:var(--jade-d);padding:8px 26px 20px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:13px 0;border-bottom:1px solid rgba(246,241,228,.14);color:var(--creme);font-weight:500}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;
+  font-weight:600;font-size:.95rem;background:var(--or);color:var(--jade-d);border:0;cursor:pointer;
+  transition:transform .25s,background .25s;letter-spacing:.02em}
+.btn:hover{transform:translateY(-2px);background:var(--or-l)}
+.btn.line{background:transparent;color:var(--creme);border:1.5px solid rgba(246,241,228,.5)}
+.btn.line:hover{background:var(--creme);color:var(--jade-d)}
+.btn.jade{background:var(--jade);color:var(--creme)}
+.btn.jade:hover{background:var(--jade-l)}
+
+/* ============================================================
+   H9 - HERO DIPTYQUE : 2 panneaux verticaux, titre a cheval
+   ============================================================ */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column}
+.hero .dip{flex:1;display:grid;grid-template-columns:1fr;position:relative}
+.hero .panel{position:relative;overflow:hidden;min-height:48vh;transition:flex-grow .5s ease}
+.hero .panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,42,35,.45),rgba(8,42,35,.78))}
+.hero .panel .pl{position:absolute;left:26px;bottom:26px;right:26px;z-index:2;color:var(--creme)}
+.hero .panel .pl .th{display:block;margin-bottom:4px}
+.hero .panel .pl b{font-family:var(--ff-display);font-size:1.7rem;font-weight:600;display:block}
+.hero .panel .pl span{font-size:.92rem;opacity:.85}
+/* le bloc titre central a cheval sur la jointure */
+.hero .center{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:0 26px;pointer-events:none}
+.hero .center .box{pointer-events:auto;max-width:680px}
+.hero .center .th{color:var(--or-l);font-size:1.05rem;display:block;margin-bottom:10px}
+.hero h1{font-size:clamp(3rem,9vw,6rem);color:var(--creme);margin-bottom:18px;text-shadow:0 2px 40px rgba(0,0,0,.5)}
+.hero h1 em{font-style:italic;color:var(--or-l)}
+.hero .center p{color:rgba(246,241,228,.92);font-size:1.16rem;max-width:480px;margin:0 auto 28px}
+.hero .center .acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* stats bande sous hero */
+.statband{background:var(--jade-d);color:var(--creme);padding:30px 0}
+.statband .row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:center}
+.statband b{font-family:var(--ff-display);font-size:2.2rem;color:var(--or-l);display:block;line-height:1}
+.statband span{font-size:.84rem;opacity:.78;margin-top:4px;display:block}
+
+section{padding:88px 0}
+.sec-head{max-width:640px;margin:0 auto 52px;text-align:center}
+.sec-head h2{font-size:clamp(2.2rem,5vw,3.4rem);margin:14px 0 12px}
+.sec-head p{color:var(--ink-soft);font-size:1.1rem}
+.jade-sec{background:var(--jade);color:var(--creme)}
+.jade-sec .sec-head p{color:rgba(246,241,228,.78)}
+
+/* ============================================================
+   SIGNATURE TRAITEUR : CARTE-MENU editoriale (vraie carte, pas cartes)
+   ============================================================ */
+.menu{max-width:780px;margin:0 auto}
+.menu .formula{padding:34px 0;border-bottom:1px solid var(--line)}
+.menu .formula:last-child{border-bottom:0}
+.menu .fhead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:6px;
+  flex-wrap:wrap}
+.menu .fhead .nm{font-family:var(--ff-display);font-size:1.9rem;font-weight:600}
+.menu .fhead .nm .th{font-size:.95rem;margin-left:8px}
+.menu .fhead .pr{font-family:var(--ff-display);font-size:1.6rem;color:var(--or);font-weight:600;white-space:nowrap}
+.menu .fsub{color:var(--ink-soft);font-size:.95rem;font-style:italic;margin-bottom:16px}
+.menu .courses{display:grid;gap:7px}
+.menu .courses .line{display:flex;gap:12px;font-size:1.02rem;align-items:baseline}
+.menu .courses .line .role{flex:none;width:96px;color:var(--or);font-weight:600;font-size:.82rem;
+  letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.menu .courses .line .dish{color:var(--ink)}
+.jade-sec .menu .formula{border-color:rgba(246,241,228,.16)}
+.jade-sec .menu .courses .line .dish{color:rgba(246,241,228,.92)}
+.jade-sec .menu .fsub{color:rgba(246,241,228,.7)}
+
+/* ============================================================
+   B1 - BANDES pleine largeur alternees (image | texte)
+   ============================================================ */
+.band{display:grid;grid-template-columns:1fr;align-items:stretch;min-height:420px}
+.band .ph{position:relative;min-height:300px;overflow:hidden}
+.band .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band .tx{display:flex;flex-direction:column;justify-content:center;padding:54px 40px}
+.band .tx h3{font-size:clamp(1.8rem,4vw,2.6rem);margin:12px 0 14px}
+.band .tx p{color:var(--ink-soft);margin-bottom:18px}
+.band.rev .tx{background:var(--creme-2)}
+.jade-sec .band .tx p{color:rgba(246,241,228,.8)}
+
+/* mosaique galerie */
+.mosaic{display:grid;gap:10px;grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+.mosaic a{position:relative;overflow:hidden;border-radius:3px;background:var(--creme-2)}
+.mosaic a img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.mosaic a:hover img{transform:scale(1.08)}
+.mosaic a.w2{grid-column:span 2}.mosaic a.h2{grid-row:span 2}
+
+/* pull quotes avis */
+.quotes{display:grid;gap:30px;grid-template-columns:1fr;max-width:980px;margin:0 auto}
+.quote{text-align:center}
+.quote .stars{color:var(--or);letter-spacing:3px;margin-bottom:12px}
+.quote p{font-family:var(--ff-display);font-size:1.4rem;line-height:1.4;font-style:italic;margin-bottom:12px}
+.jade-sec .quote p{color:var(--creme)}
+.quote .who{font-size:.85rem;color:var(--ink-soft);font-weight:600;letter-spacing:.04em}
+.jade-sec .quote .who{color:var(--or-l)}
+
+/* CTA reserver */
+.cta{text-align:center;max-width:640px;margin:0 auto}
+.cta h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:14px}
+.cta p{color:rgba(246,241,228,.82);margin-bottom:28px}
+
+/* footer */
+footer{background:var(--jade-d);color:rgba(246,241,228,.78);padding:56px 0 26px}
+.fgrid{display:grid;gap:30px;grid-template-columns:1fr}
+.fgrid h4{font-family:var(--ff-display);color:var(--creme);font-size:1.3rem;margin-bottom:14px}
+.fgrid a,.fgrid p{color:rgba(246,241,228,.7);font-size:.92rem;display:block;margin-bottom:8px}
+.fgrid a:hover{color:var(--or-l)}
+.fbot{border-top:1px solid rgba(246,241,228,.14);margin-top:34px;padding-top:20px;display:flex;
+  flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:.8rem;color:rgba(246,241,228,.5)}
+.fbot .demo{color:var(--or)}
+
+/* animations gated */
+.js-anim .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js-anim .reveal{opacity:1!important;transform:none!important;transition:none!important}}
+
+/* desktop */
+@media(min-width:780px){
+  .hero .dip{grid-template-columns:1fr 1fr}
+  .hero .panel{min-height:auto}
+  .hero .panel:hover{flex-grow:1.2}
+  .statband .row{grid-template-columns:repeat(4,1fr)}
+  .menu .fhead .nm{font-size:2.1rem}
+  .band{grid-template-columns:1fr 1fr}
+  .band.rev .ph{order:2}
+  .mosaic{grid-template-columns:repeat(4,1fr);grid-auto-rows:190px}
+  .quotes{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:920px){.nav nav{display:flex}.nav .resa{display:inline-flex}.burger{display:none}}
