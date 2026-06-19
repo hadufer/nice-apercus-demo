@@ -39,16 +39,17 @@
       "slug": "spec-tobi",
       "name": "SPEC TOBI",
       "vertical": "Electricien/Plombier",
-      "email": "info@spectobi.fr",
+      "email": "info@spectobi.fr (BOUNCE - boite morte)",
       "phone_masked_demo": "+33493216061",
-      "phone_real": null,
-      "source_url": "https://spectobi.fr",
-      "source_url_status": "known",
+      "phone_real": "04 93 21 60 61",
+      "source_url": "https://www.spec-tobi-plomberie.fr",
+      "source_url_status": "live",
       "demo_url": "https://demo.azuradev.com/spec-tobi/",
       "cta_style": "Devis gratuit",
-      "outreach_status": "not_contacted",
+      "outreach_status": "email_bounced_call_only",
       "city": "Nice",
-      "hook_detail": "electricite et plomberie, savoir-faire sur 3 generations"
+      "hook_detail": "electricite et plomberie, savoir-faire sur 3 generations",
+      "address": "133 av. Sainte-Marguerite, 06200 Nice"
     },
     {
       "slug": "bellomo-plomberie",
