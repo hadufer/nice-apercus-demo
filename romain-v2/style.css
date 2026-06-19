@@ -164,9 +164,10 @@ footer{background:var(--anthr);color:rgba(238,241,243,.78);padding:52px 0 24px}
 
 /* tablette (600-779) : sortir du layout mobile empile */
 @media(min-width:600px){
-  .hero .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .hero .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:minmax(150px,auto)}
   .tile.main{grid-column:span 2;grid-row:span 2}
   .tile.photo.big{grid-column:span 2}
+  .tile.photo{min-height:0}
   .svc-bento{grid-template-columns:repeat(2,1fr)}
   .svc.feat{grid-column:span 2}
   .statband .row{grid-template-columns:repeat(4,1fr)}
@@ -175,9 +176,10 @@ footer{background:var(--anthr);color:rgba(238,241,243,.78);padding:52px 0 24px}
 }
 /* desktop */
 @media(min-width:780px){
-  .hero .bento{grid-template-columns:repeat(4,1fr);grid-auto-rows:150px}
+  .hero .bento{grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(150px,auto)}
   .tile.main{grid-column:span 2;grid-row:span 2}
   .tile.photo.big{grid-column:span 2;grid-row:span 2}
+  .tile.photo{min-height:0}
   .svc-bento{grid-template-columns:repeat(3,1fr)}
   .svc.feat{grid-column:span 1;grid-row:span 2;display:flex;flex-direction:column;justify-content:center}
   .statband .row{grid-template-columns:repeat(4,1fr)}
