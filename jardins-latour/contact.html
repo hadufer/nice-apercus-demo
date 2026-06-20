@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact & devis gratuit - Jardins Latour</title><meta name="description" content="Contactez Jardins Latour, paysagiste a Vence. Devis gratuit sous 48h. Telephone 04 93 00 00 00.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..560&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="nav solid"><div class="wrap">
+  <a href="index.html" class="brand">Jardins Latour<small>Paysagiste createur - Cote d'Azur</small></a>
+  <nav><a href="index.html">Accueil</a>
+<a href="prestations.html">Prestations</a>
+<a href="realisations.html">Réalisations</a>
+<a href="apropos.html">À propos</a>
+<a href="contact.html" class="active">Contact</a></nav>
+  <a class="ph" href="tel:+33493000000">04 93 00 00 00</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+<div class="mobile-menu" id="mm"><a href="index.html">Accueil</a>
+<a href="prestations.html">Prestations</a>
+<a href="realisations.html">Réalisations</a>
+<a href="apropos.html">À propos</a>
+<a href="contact.html" class="active">Contact</a><a class="btn" href="contact.html">Devis gratuit</a></div>
+<section class="page-hero"><div class="bg"><img src="img/cloture-vegetale.jpg" alt="Jardin fleuri"></div>
+  <div class="wrap"><div class="crumb"><a href="index.html">Accueil</a> - Contact</div>
+  <h1>Parlons de votre jardin</h1><p>Decrivez votre projet ou appelez-nous. Devis gratuit et reponse sous 48h.</p></div>
+</section>
+<section><div class="wrap"><div class="cgrid">
+  <div class="reveal"><div class="info-card">
+    <div class="irow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><div><b>Telephone</b><span><a href="tel:+33493000000" style="color:var(--terre-d);font-weight:600">04 93 00 00 00</a></span></div></div>
+    <div class="irow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Adresse</b><span>Chemin des Oliviers, 06140 Vence</span></div></div>
+    <div class="irow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Horaires</b><span>Lundi au samedi, 8h - 19h</span></div></div>
+    <div class="irow"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-9 16-9 0 9-3 16-9 16z"/><path d="M11 20c0-4 2-7 5-9"/></svg></span><div><b>Zone</b><span>Vence, Saint-Paul, Nice, Antibes, Mougins, Grasse et alentours (06)</span></div></div>
+  </div>
+  <div class="info-card" style="margin-top:22px;text-align:center"><div class="stars" style="color:var(--or);font-size:1.3rem;letter-spacing:3px">★★★★★</div>
+    <p style="margin-top:8px;font-family:var(--ff-display);font-size:1.4rem;color:var(--terre-d)">5,0 / 5</p><p style="color:var(--ardoise-soft);font-size:.9rem">sur 47 avis clients</p></div>
+  </div>
+  <div class="reveal"><div class="info-card">
+    <h3 style="font-size:1.4rem;margin-bottom:6px">Votre projet</h3>
+    <p style="color:var(--ardoise-soft);font-size:.92rem;margin-bottom:20px">Tous les champs sont indicatifs. On vous rappelle pour en parler.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <div><label>Nom</label><input type="text" placeholder="Votre nom"></div>
+      <div><label>Telephone</label><input type="tel" placeholder="06 .. .. .. .."></div>
+      <div><label>Type de projet</label><select><option>Creation de jardin</option><option>Amenagement paysager</option><option>Entretien & taille</option><option>Arrosage automatique</option><option>Autre</option></select></div>
+      <div><label>Votre message</label><textarea placeholder="Decrivez votre terrain, vos envies, la surface..."></textarea></div>
+      <button class="btn" type="submit">Envoyer ma demande</button>
+      <p class="form-note ok" style="display:none;color:var(--olive-d);font-weight:600">Merci ! Ceci est une demo : appelez le 04 93 00 00 00 pour un devis immediat.</p>
+      <p class="form-note">Demo de site - formulaire non connecte. Pour un vrai devis, appelez le 04 93 00 00 00.</p>
+    </form>
+  </div></div>
+</div></div></section>
+<footer><div class="wrap"><div class="fgrid">
+  <div><div class="brand" style="color:var(--creme);font-size:1.3rem;margin-bottom:12px">Jardins Latour</div>
+    <p>Paysagiste createur de jardins mediterraneens a Vence et sur toute la Cote d'Azur. Conception, amenagement et entretien, du croquis a la derniere plantation.</p>
+    <p style="color:var(--or);font-weight:600">5,0 / 5 - 47 avis clients</p></div>
+  <div><h4>Prestations</h4><a href="prestations.html">Creation de jardin</a><a href="prestations.html">Amenagement paysager</a><a href="prestations.html">Entretien & taille</a><a href="prestations.html">Arrosage & terrasses</a></div>
+  <div><h4>Contact</h4><a href="tel:+33493000000">04 93 00 00 00</a><p>Chemin des Oliviers, 06140 Vence</p><p>Lun - Sam, 8h - 19h</p><a href="contact.html" class="btn" style="margin-top:10px">Devis gratuit</a></div>
+</div><div class="fbot"><span>(c) 2026 Jardins Latour - paysagiste - Vence (06)</span><span class="demo">Demo realisee par Azura Dev</span></div>
+</div></footer>
+<script defer src="animate.js"></script>
+<script>
+var b=document.getElementById('burger'),m=document.getElementById('mm');
+if(b){b.addEventListener('click',function(){b.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';});}
+var nv=document.querySelector('.nav');
+if(nv&&!nv.classList.contains('solid')){addEventListener('scroll',function(){nv.classList.toggle('solid',scrollY>60);});}
+</script></body></html>
