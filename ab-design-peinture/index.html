@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=18" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=15" />
 
   <!-- Données structurées : entreprise de peinture locale -->
   <script type="application/ld+json">
@@ -299,18 +299,6 @@
             <span class="note-inline">Photos transmises par l'artisan. D'autres réalisations à venir.</span>
           </p>
         </header>
-
-        <div class="gallery3d" data-gallery3d hidden>
-          <canvas class="g3d-canvas"></canvas>
-          <div class="g3d-overlay" data-g3d-overlay>
-            <span class="g3d-title" data-g3d-title></span>
-            <span class="g3d-sub" data-g3d-sub></span>
-          </div>
-          <p class="g3d-hint" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M9 6 4 12l5 6M15 6l5 6-5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Glissez pour parcourir &middot; cliquez pour agrandir
-          </p>
-        </div>
 
         <div class="gallery" data-gallery>
           <figure class="shot shot-tall" data-shot data-label="Ravalement de façade, préparation et mise en peinture extérieure">
@@ -624,12 +612,5 @@
   </div>
 
   <script src="assets/js/main.js?v=2" defer></script>
-
-  <!-- Galerie 3D des réalisations (WebGL · Three.js). Progressif :
-       la grille statique reste le fallback si pas de WebGL / reduced-motion. -->
-  <script type="importmap">
-  { "imports": { "three": "https://unpkg.com/three@0.169.0/build/three.module.js" } }
-  </script>
-  <script type="module" src="assets/js/gallery3d.js?v=2"></script>
 </body>
 </html>
