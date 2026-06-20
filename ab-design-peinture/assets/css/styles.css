@@ -831,3 +831,95 @@ body::after {
   .hero-nuancier span:first-child, .hero-nuancier span:last-child { overflow: visible; z-index: 1; }
   .hero-nuancier span:first-child .sw-name, .hero-nuancier span:last-child .sw-name { font-size: 0.54rem; letter-spacing: 0.03em; white-space: nowrap; }
 }
+
+/* ============================================================
+   Galerie 3D des réalisations (WebGL · Three.js)
+   Affichée seulement quand le JS bascule (retire [hidden]).
+   Sinon, .gallery statique reste le fallback.
+   ============================================================ */
+.gallery3d {
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 52vw, 620px);
+  margin-top: 0.4rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background:
+    radial-gradient(120% 100% at 50% 0%, oklch(0.30 0.013 264) 0%, oklch(0.232 0.014 266) 70%);
+  box-shadow: var(--shadow-lg);
+  isolation: isolate;
+  touch-action: pan-y;
+}
+.gallery3d[hidden] { display: none; }
+.g3d-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+  cursor: grab;
+}
+.g3d-canvas.is-grabbing { cursor: grabbing; }
+
+/* Légende nette en surimpression (hors WebGL pour rester lisible) */
+.g3d-overlay {
+  position: absolute;
+  left: clamp(1rem, 3vw, 2.2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  display: flex; flex-direction: column; gap: 0.15rem;
+  padding: 0.7rem 1.05rem;
+  border-radius: var(--radius);
+  background: oklch(0.18 0.012 264 / 0.55);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid var(--hairline-dark);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  pointer-events: none;
+  max-width: min(80%, 30rem);
+}
+.g3d-overlay.is-on { opacity: 1; transform: translateY(0); }
+.g3d-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: var(--white);
+  line-height: 1.1;
+}
+.g3d-sub {
+  font-size: 0.82rem;
+  color: var(--on-dark-soft);
+  letter-spacing: 0.01em;
+}
+.g3d-hint {
+  position: absolute;
+  top: clamp(0.8rem, 2.4vw, 1.3rem);
+  right: clamp(0.9rem, 2.6vw, 1.6rem);
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  color: var(--on-dark-soft);
+  background: oklch(0.18 0.012 264 / 0.4);
+  border: 1px solid var(--hairline-dark);
+  pointer-events: none;
+}
+.g3d-hint svg { color: var(--ocre); }
+
+@media (max-width: 640px) {
+  .g3d-hint { font-size: 0.68rem; padding: 0.32rem 0.6rem; }
+}
+
+/* Si l'utilisateur réduit les animations : on ne montre jamais la 3D,
+   la grille statique (jamais masquée par le JS dans ce cas) reste seule. */
+@media (prefers-reduced-motion: reduce) {
+  .gallery3d { display: none !important; }
+}
+
+/* L'attribut [hidden] doit l'emporter sur .gallery{display:grid}
+   (sinon la grille statique resterait visible SOUS la galerie 3D). */
+.gallery[hidden] { display: none !important; }
+
+/* Galerie 3D plus compacte sur mobile (moins de vide haut/bas) */
+@media (max-width: 640px) {
+  .gallery3d { height: clamp(330px, 92vw, 430px); }
+}
