@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artisan Bernasconi — Peinture & Ravalement de façades · Antibes</title>
+<meta name="description" content="Artisan Bernasconi : peintre en bâtiment et ravalement de façades à Antibes (06600). Noté 5/5 sur Google. Devis gratuit — 04 22 10 42 37.">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+<style>
+/* ===== HERO C : repetition-hover editorial ===== */
+#hero-c{position:relative;padding:17vh 0 9vh;background:var(--bg);overflow:hidden}
+/* fade-in of the hero background on arrival */
+#hero-c::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(120% 80% at 50% 0%,rgba(224,97,47,.10),transparent 55%),
+             linear-gradient(180deg,rgba(61,110,132,.08),transparent 40%);
+  opacity:0;transition:opacity 2.2s var(--ease)}
+body.hero-in #hero-c::before{opacity:1}
+#hero-c>*{position:relative;z-index:1}
+/* intro veil that fades away on load */
+#intro-veil{position:fixed;inset:0;z-index:8000;background:var(--bg);pointer-events:none;
+  transition:opacity 1.4s var(--ease),visibility 1.4s}
+body.hero-in #intro-veil{opacity:0;visibility:hidden}
+.hero-c-intro{width:90%;max-width:var(--maxw);margin:0 auto 6vh}
+.hero-c-intro .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);font-weight:600;margin-bottom:1.3rem;padding:.5rem 1rem;border:1px solid rgba(217,142,90,.3);border-radius:100px;background:rgba(15,10,7,.4)}
+.hero-c-intro .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#62c46a;box-shadow:0 0 10px #62c46a}
+.hero-c-intro h1{font-size:clamp(2.6rem,7vw,5.4rem);font-weight:800;max-width:16ch;background:linear-gradient(180deg,#fff,var(--cream) 60%,var(--clay));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-c-intro h1 em{font-style:normal;-webkit-text-fill-color:var(--terracotta);color:var(--terracotta)}
+.hero-c-intro .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:48ch;margin-top:1.5rem;color:#ecdccb}
+.hero-c-intro .cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}
+.hero-c-intro .rating-pill{display:inline-flex;align-items:center;gap:.6rem;margin-top:2.2rem;font-size:.95rem}
+.hero-c-intro .stars{color:#ffc24b;letter-spacing:2px}
+/* editorial rows */
+.rep-row{width:92%;max-width:1320px;margin:0 auto;position:relative;padding:4.5vh 0}
+.rep-imgs{display:flex;justify-content:center;align-items:flex-end;gap:clamp(1rem,3vw,3rem);position:relative;z-index:2}
+.rep-img{position:relative;background-size:cover;background-position:center;flex:0 0 auto;will-change:transform;isolation:isolate;transition:transform .7s var(--ease)}
+.rep-img.shape-portrait{width:clamp(160px,18vw,285px);aspect-ratio:285/450;border-radius:8px}
+.rep-img.shape-arch{width:clamp(150px,16vw,250px);aspect-ratio:250/420;border-radius:140px 140px 8px 8px}
+.rep-img.shape-oval{width:clamp(150px,16vw,250px);aspect-ratio:250/360;border-radius:50%/42%}
+.rep-img.shape-wide{width:clamp(190px,22vw,340px);aspect-ratio:340/240;border-radius:8px}
+.rep-title{font-family:'Bricolage Grotesque';font-weight:800;text-align:center;line-height:.86;margin-top:-2vw;position:relative;z-index:3;pointer-events:none;will-change:transform;font-size:clamp(3rem,11vw,9rem);letter-spacing:-.03em}
+.rep-title .a{display:block;color:var(--cream)}
+.rep-title .b{display:block;color:transparent;-webkit-text-stroke:1px rgba(217,142,90,.5)}
+.rep-row .tag{position:absolute;top:4.5vh;left:3%;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);font-weight:600;z-index:3}
+body:not(.hero-in) .rep-row{opacity:0;transform:translateY(40px)}
+.rep-row{transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rep-scroll-hint{text-align:center;color:var(--muted);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;margin-top:3vh}
+@media(max-width:760px){
+  #hero-c{padding:15vh 0 7vh}
+  .rep-row{width:94%;padding:3.5vh 0}
+  .rep-imgs{gap:.5rem;align-items:center}
+  .rep-img.shape-wide{display:none}
+  /* keep the 3 images inside the viewport: equal flexible widths */
+  .rep-img.shape-portrait,.rep-img.shape-arch,.rep-img.shape-oval{
+    width:auto;flex:1 1 0;min-width:0;height:clamp(170px,42vw,230px);aspect-ratio:auto}
+  .rep-title{font-size:clamp(2.2rem,13vw,3.4rem);margin-top:-3vw}
+}
+@media(prefers-reduced-motion:reduce){.rep-row{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<div id="intro-veil"></div>
+<div class="cursor-dot"></div><div class="cursor-ring"></div>
+<nav id="nav"><div class="wrap">
+  <div class="brand"><span class="mark">AB</span> Artisan Bernasconi</div>
+  <div class="nav-links">
+    <a href="#savoir">Savoir-faire</a><a href="#realisations">Réalisations</a><a href="#avis">Avis</a><a href="#contact">Contact</a>
+  </div>
+  <a href="tel:+33422104237" class="nav-cta" data-cursor="appeler">04 22 10 42 37</a>
+  <button id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></nav>
+<div id="mobile-menu">
+  <a href="#savoir">Savoir-faire</a>
+  <a href="#realisations">Réalisations</a>
+  <a href="#avis">Avis</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+33422104237" class="mm-cta">📞 04 22 10 42 37</a>
+</div>
+<header id="hero-c">
+  <div class="hero-c-intro">
+    <h1>L'artisan qui sublime vos <em>façades</em>.</h1>
+    <p class="lead">Peinture en bâtiment & ravalement. Survolez chaque réalisation : le savoir-faire se répète, chantier après chantier.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn btn-primary" data-cursor="devis">Devis gratuit →</a>
+      <a href="#realisations" class="btn btn-ghost" data-cursor="voir">Nos réalisations</a>
+    </div>
+    <div class="rating-pill"><span class="stars">★★★★★</span> <strong>5,0 / 5</strong> · <span style="color:var(--muted)">11 avis Google vérifiés</span></div>
+  </div>
+
+  <div class="rep-row">
+    <span class="tag">Ravalement</span>
+    <div class="rep-imgs">
+      <div class="rep-img shape-arch" style="background-image:url(./assets/photos/chantier-01.jpg)"></div>
+      <div class="rep-img shape-portrait" style="background-image:url(./assets/photos/chantier-03.jpg)"></div>
+      <div class="rep-img shape-oval" style="background-image:url(./assets/photos/chantier-05.jpg)"></div>
+    </div>
+    <h2 class="rep-title"><span class="a">RAVALEMENT</span><span class="b">DE FAÇADES</span></h2>
+  </div>
+
+  <div class="rep-row">
+    <span class="tag">Peinture</span>
+    <div class="rep-imgs">
+      <div class="rep-img shape-wide" style="background-image:url(./assets/photos/chantier-04.jpg)"></div>
+      <div class="rep-img shape-portrait" style="background-image:url(./assets/photos/chantier-07.jpg)"></div>
+      <div class="rep-img shape-arch" style="background-image:url(./assets/photos/chantier-02.jpg)"></div>
+    </div>
+    <h2 class="rep-title"><span class="a">PEINTURE</span><span class="b">EN BÂTIMENT</span></h2>
+  </div>
+
+  <div class="rep-row">
+    <span class="tag">Rénovation</span>
+    <div class="rep-imgs">
+      <div class="rep-img shape-wide" style="background-image:url(./assets/photos/chantier-06.jpg)"></div>
+      <div class="rep-img shape-oval" style="background-image:url(./assets/photos/chantier-03.jpg)"></div>
+      <div class="rep-img shape-portrait" style="background-image:url(./assets/photos/chantier-01.jpg)"></div>
+    </div>
+    <h2 class="rep-title"><span class="a">RÉNOVATION</span><span class="b">&amp; FINITIONS</span></h2>
+  </div>
+
+  <p class="rep-scroll-hint">Survolez les images · faites défiler ↓</p>
+</header>
+<!-- ===== SAVOIR-FAIRE ===== -->
+<section id="savoir" class="panel">
+  <div class="wrap">
+    <span class="kicker rv">Notre métier</span>
+    <h2 class="sth dark" data-accent="façades,façade">Un savoir-faire complet, du diagnostic à la dernière couche sur vos façades.</h2>
+    <p class="sub rv d1">De la villa azuréenne à l'immeuble en centre-ville, nous redonnons éclat et protection à vos murs — avec des finitions à la hauteur des plus belles adresses de la Côte.</p>
+    <div class="services">
+      <article class="svc rv d1"><div class="ico">🎨</div><h3>Ravalement de façades</h3><p>Nettoyage, réparation des fissures, enduits et mise en peinture. Une façade saine, protégée des intempéries et embellie pour des années.</p></article>
+      <article class="svc rv d2"><div class="ico">🖌️</div><h3>Peinture en bâtiment</h3><p>Intérieur comme extérieur : préparation rigoureuse des supports, application maîtrisée, rendu net et durable, sans coulures ni reprises.</p></article>
+      <article class="svc rv d3"><div class="ico">🏠</div><h3>Rénovation & finitions</h3><p>Murs, plafonds, boiseries et détails. Chaque chantier traité comme une pièce unique, jusqu'à la finition impeccable.</p></article>
+      <article class="svc rv d4"><div class="ico">🛡️</div><h3>Traitement & protection</h3><p>Hydrofuge, anti-mousse, imperméabilisants : on protège durablement vos murs contre l'humidité et le climat méditerranéen.</p></article>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><div class="n" data-to="5" data-dec="1">0</div><div class="l">Note Google sur 5</div></div>
+      <div class="stat rv d1"><div class="n" data-to="11">0</div><div class="l">Avis clients vérifiés</div></div>
+      <div class="stat rv d2"><div class="n" data-to="100" data-suf="%">0</div><div class="l">Clients satisfaits</div></div>
+      <div class="stat rv d3"><div class="n">06</div><div class="l">Antibes & Alpes-Maritimes</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEPTH GALLERY (catalog: depth-gallery) ===== -->
+<section id="realisations" class="depth-sec">
+  <div class="wrap">
+    <div class="depth-head">
+      <div>
+        <span class="kicker rv">Réalisations</span>
+        <h2 class="rv d1">Un mur d'images, en profondeur.</h2>
+      </div>
+      <p class="rv d2">Photos réelles de nos chantiers — façades, villas, intérieurs et rénovations sur la Côte d'Azur. Faites défiler pour explorer.</p>
+    </div>
+    <div class="depth">
+      <figure class="d-a liquid" data-cursor="voir"><div class="sheen"></div><img src="./assets/photos/chantier-01.jpg" alt="Ravalement façade villa terracotta"><figcaption class="cap">Ravalement façade · villa provençale</figcaption></figure>
+      <figure class="d-b liquid" data-cursor="voir"><div class="sheen"></div><img src="./assets/photos/chantier-04.jpg" alt="Rénovation intérieure terrasse vue mer"><figcaption class="cap">Rénovation intérieure · séjour & terrasse</figcaption></figure>
+      <figure class="d-c liquid" data-cursor="voir"><div class="sheen"></div><img src="./assets/photos/chantier-03.jpg" alt="Villa moderne après ravalement"><figcaption class="cap">Villa neuve · finition crépi</figcaption></figure>
+      <figure class="d-d liquid" data-cursor="voir"><div class="sheen"></div><img src="./assets/photos/chantier-05.jpg" alt="Rénovation façade en hauteur"><figcaption class="cap">Façade · vue collines</figcaption></figure>
+      <figure class="d-e liquid" data-cursor="voir"><div class="sheen"></div><img src="./assets/photos/chantier-02.jpg" alt="Façade immeuble centre-ville"><figcaption class="cap">Immeuble · centre historique</figcaption></figure>
+      <figure class="d-f liquid" data-cursor="voir"><div class="sheen"></div><img src="./assets/photos/chantier-07.jpg" alt="Pièce repeinte finition mate"><figcaption class="cap">Peinture intérieure · finition mate</figcaption></figure>
+      <figure class="d-g liquid" data-cursor="voir"><div class="sheen"></div><img src="./assets/photos/chantier-06.jpg" alt="Véhicule Artisan Bernasconi sur chantier"><figcaption class="cap">Artisan Bernasconi · sur le terrain</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AVIS ===== -->
+<section id="avis" class="panel" style="border-radius:46px 46px 0 0;margin-top:-46px">
+  <div class="wrap">
+    <span class="kicker rv">Ils nous ont fait confiance</span>
+    <h2 class="sth dark" data-accent="5,étoiles">5 étoiles, et chaque avis le confirme.</h2>
+    <div class="reviews">
+      <article class="review rv d1"><span class="stars">★★★★★</span><p>« Je recommande vivement cette entreprise : excellent travail et service impeccable. »</p><div class="who"><span class="av">S</span><div><b>Shoaib Akhtar</b><span>Avis Google</span></div></div></article>
+      <article class="review rv d2"><span class="stars">★★★★★</span><p>« Artisan de confiance, je ferai encore appel à eux. »</p><div class="who"><span class="av">P</span><div><b>Patrick Boyer</b><span>Avis Google</span></div></div></article>
+      <article class="review rv d3"><span class="stars">★★★★★</span><p>« Service fiable et rapide. »</p><div class="who"><span class="av">R</span><div><b>Reynaud Leclair</b><span>Avis Google</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="kicker rv">Contact</span>
+      <h2 class="rv d1">Parlons de votre projet de façade.</h2>
+      <p class="sub rv d2">Un devis gratuit, sans engagement, et des conseils d'artisan adaptés à votre bien. On se déplace sur tout Antibes et les Alpes-Maritimes.</p>
+      <div class="info-list">
+        <div class="info rv d2"><span class="ic">📞</span><a href="tel:+33422104237"><small>Téléphone</small>04 22 10 42 37</a></div>
+        <div class="info rv d3"><span class="ic">📍</span><span><small>Adresse</small>Chem. de la Valmasque, 06600 Antibes</span></div>
+        <div class="info rv d4"><span class="ic">🧭</span><span><small>Plus Code</small>J473+W7 Antibes</span></div>
+      </div>
+    </div>
+    <div class="contact-card rv d2">
+      <div class="big-cta">Devis gratuit</div>
+      <p style="color:var(--muted)">Appelez directement, on répond vite.</p>
+      <a href="tel:+33422104237" class="btn btn-primary" style="margin-top:1.6rem;width:100%;justify-content:center" data-cursor="appeler">📞 04 22 10 42 37</a>
+      <div class="hours">
+        <div class="row"><span>Lundi</span><b>Ouvert 24h/24</b></div>
+        <div class="row"><span>Mardi</span><b>Ouvert 24h/24</b></div>
+        <div class="row"><span>Mercredi</span><b>Ouvert 24h/24</b></div>
+        <div class="row"><span>Jeudi</span><b>Ouvert 24h/24</b></div>
+        <div class="row"><span>Vendredi</span><b>Ouvert 24h/24</b></div>
+        <div class="row"><span>Samedi</span><b>Ouvert 24h/24</b></div>
+        <div class="row closed"><span>Dimanche</span><b>Fermé</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="mark">AB</span> Artisan Bernasconi</div>
+    <p>Peinture en bâtiment & ravalement de façades · Chem. de la Valmasque, 06600 Antibes · 04 22 10 42 37</p>
+    <p style="margin-top:.6rem;opacity:.6">Noté 5,0 ★ sur Google (11 avis) · Site vitrine — Artisan Bernasconi © 2026</p>
+  </div>
+</footer>
+
+<!-- SVG filter for liquid hover (offline) -->
+<script src="./assets/js/hero-c.js"></script>
+<script src="./assets/js/app.js"></script>
+</body></html>
